@@ -27,7 +27,7 @@ export default function LanguageSwitcher({ variant, className = '' }: LanguageSw
             type="button"
             onClick={() => switchLocale(l)}
             aria-pressed={locale === l}
-            className={`px-2.5 py-1 text-xs font-mono rounded-input transition-all ${
+            className={`min-h-11 inline-flex items-center px-4 text-sm font-mono rounded-input transition-all ${
               locale === l ? 'bg-mint text-ink font-bold' : 'text-meta hover:text-white'
             }`}
           >

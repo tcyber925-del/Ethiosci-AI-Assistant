@@ -142,8 +142,8 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
               </p>
             </div>
             <div>
-              <h4 className="label-mono mb-4 text-white">{t('footer_resources')}</h4>
-              <ul className="space-y-2 font-mono text-sm text-soft">
+              <h3 className="label-mono mb-4 text-white">{t('footer_resources')}</h3>
+              <ul className="space-y-2 font-mono text-sm text-soft [&_a]:inline-block [&_a]:py-1">
                 <li>
                   <a href="#learn" className="hover:text-mint">
                     {t('nav_learn')}
@@ -172,8 +172,8 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
               </ul>
             </div>
             <div>
-              <h4 className="label-mono mb-4 text-white">{t('footer_portal')}</h4>
-              <ul className="space-y-2 font-mono text-sm text-soft">
+              <h3 className="label-mono mb-4 text-white">{t('footer_portal')}</h3>
+              <ul className="space-y-2 font-mono text-sm text-soft [&_a]:inline-block [&_a]:py-1">
                 <li>
                   <Link href="/login" className="hover:text-mint">
                     {t('footer_login')}

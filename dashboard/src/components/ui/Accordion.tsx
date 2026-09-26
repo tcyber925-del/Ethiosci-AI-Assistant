@@ -126,7 +126,7 @@ export function AccordionItem({
           aria-expanded={expanded}
           aria-controls={panelId}
           onClick={() => toggle(id)}
-          className={`flex w-full items-center justify-between gap-3 py-3 text-left text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus ${titleClassName}`}
+          className={`flex w-full items-center justify-between gap-3 py-3 text-left text-sm font-medium ${titleClassName}`}
         >
           <span>{title}</span>
           <motion.span

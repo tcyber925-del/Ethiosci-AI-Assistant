@@ -32,15 +32,10 @@ const descKeys = [
   'pipe_stage_8_desc',
 ] as const
 
-/** Product/technique names — notation, deliberately not translated. */
-const tags = [
-  'LangGraph',
-  'Hybrid RAG',
-  'Dense + BM25',
-  'Cross-encoder',
-  'Claim verification',
-  'Curriculum grounded',
-]
+/** Product/technique names — proper nouns and notation, deliberately not translated. */
+const tags = ['LangGraph', 'Hybrid RAG', 'Dense + BM25', 'Cross-encoder'] as const
+/** Word-bearing tags — translated copy (DESIGN.md: a word in English is copy, not notation). */
+const wordTagKeys = ['tag_claim_verification', 'tag_curriculum_grounded'] as const
 
 export default function PipelineSection() {
   const t = useTranslations('landing')
@@ -53,7 +48,7 @@ export default function PipelineSection() {
         <h2 className="display mt-6 text-[48px] md:text-[88px]">
           {t('pipe_title_1')}
           <br />
-          <span className="text-violet">{t('pipe_title_2')}</span>
+          <span className="text-mint">{t('pipe_title_2')}</span>
         </h2>
 
         <ol
@@ -91,7 +86,7 @@ export default function PipelineSection() {
         </ol>
 
         <ul className="mt-6 flex flex-wrap gap-2">
-          {tags.map((tag) => (
+          {[...tags, ...wordTagKeys.map((k) => t(k))].map((tag) => (
             <li key={tag} className="label-mono rounded-input border px-3 py-2 text-meta">
               {tag}
             </li>

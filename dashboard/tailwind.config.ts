@@ -47,6 +47,7 @@ const config: Config = {
         'v2-text-primary': 'color-mix(in srgb, var(--v2-text-primary) calc(100% * <alpha-value>), transparent)',
         'v2-text-secondary': 'color-mix(in srgb, var(--v2-text-secondary) calc(100% * <alpha-value>), transparent)',
         'v2-border': 'var(--v2-border)',
+        'v2-focus': 'var(--v2-focus)',
         'v2-accent': 'color-mix(in srgb, var(--v2-accent) calc(100% * <alpha-value>), transparent)',
         'v2-accent-hover': 'color-mix(in srgb, var(--v2-accent-hover) calc(100% * <alpha-value>), transparent)',
         'v2-accent-muted': 'var(--v2-accent-muted)',
@@ -64,7 +65,6 @@ const config: Config = {
         meta: marketing.meta,
         soft: marketing.soft,
         line: marketing.line,
-        link: marketing.link,
         sun: marketing.sun,
         pink: marketing.pink,
         flame: marketing.flame,
@@ -94,7 +94,12 @@ const config: Config = {
           'Noto Sans Ethiopic',
           'serif',
         ],
-        mono: ['var(--font-jbmono)', 'monospace'],
+        mono: [
+          'var(--font-jbmono)',
+          'var(--font-ethiopic)',
+          'Noto Sans Ethiopic',
+          'monospace',
+        ],
         /* Marketing surface stacks (design-system.ts → `marketingTypography`) */
         grotesk: [
           marketingTypography.body,

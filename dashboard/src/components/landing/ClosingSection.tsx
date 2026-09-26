@@ -19,13 +19,13 @@ export default async function ClosingSection() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/sign-up?role=learner"
-              className="label-mono inline-flex min-h-12 items-center rounded-stage bg-violet px-7 font-bold text-white transition-colors hover:bg-ink"
+              className="label-mono inline-flex min-h-12 items-center rounded-stage bg-violet px-7 font-bold text-white transition-colors hover:bg-ink focus-visible:outline-ink"
             >
               {t('hero_cta_start')} <span aria-hidden className="ml-2">→</span>
             </Link>
             <a
               href="#how"
-              className="label-mono inline-flex min-h-12 items-center rounded-cta border-2 border-ink px-7 font-bold transition-colors hover:bg-ink hover:text-mint"
+              className="label-mono inline-flex min-h-12 items-center rounded-cta border-2 border-ink px-7 font-bold transition-colors hover:bg-ink hover:text-mint focus-visible:outline-ink"
             >
               {t('cta_secondary')}
             </a>

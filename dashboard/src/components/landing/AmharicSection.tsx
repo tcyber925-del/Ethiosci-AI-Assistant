@@ -16,7 +16,7 @@ export default async function AmharicSection() {
         <Label>09 / Lang / EN + AM</Label>
         <Reveal>
           <p className="display mt-10 text-[56px] md:text-[120px]">{t('amh_learn_en')}</p>
-          <p lang="am" className="mt-2 font-ethiopic text-[52px] font-black leading-none text-mint md:text-[112px]">
+          <p lang="am" className="mt-2 font-ethiopic text-[52px] font-black leading-[1.12] text-mint md:text-[112px]">
             {t('amh_learn_am')}
           </p>
         </Reveal>

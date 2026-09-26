@@ -37,7 +37,7 @@ const tiles = [
     noteKey: 'subj_note_physics',
     altKey: 'subj_tile_physics_alt',
     sym: 'F = ma',
-    tone: 'bg-volt text-white',
+    tone: 'bg-volt text-ink',
     span: 'md:col-span-5',
     titleSize: 'text-[48px] md:text-[60px]',
     img: '/landing/physics.jpg',

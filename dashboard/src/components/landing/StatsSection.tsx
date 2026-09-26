@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { fetchWithTimeout } from '@/lib/fetch'
 import { Label } from './Reveal'
+import { mintLine } from './mint-line'
 
 interface Stats {
   active_students: number
@@ -59,7 +60,9 @@ export default function StatsSection() {
       <div className="mx-auto max-w-[1280px] px-5 py-24 md:px-8">
         <div className="mb-16">
           <Label>{t('stats_kicker')}</Label>
-          <h2 className="display mt-6 text-[40px] text-white md:text-[56px]">{t('stats_title')}</h2>
+          <h2 className="display mt-6 text-[40px] text-white md:text-[56px]">
+            {t.rich('stats_title', { mint: mintLine })}
+          </h2>
           {/* live badge only once counts are actually in — never on failure */}
           {stats && (
             <div className="mt-4 inline-flex items-center space-x-2 border border-mint/30 bg-mint/10 px-3 py-1">

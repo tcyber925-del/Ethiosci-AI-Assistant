@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Label, Reveal } from './Reveal'
+import { mintLine } from './mint-line'
 
 /**
  * "10 / Learning stream" — a sample day of activity. Subject names come from
@@ -21,7 +22,9 @@ export default async function StreamSection() {
       <div className="mx-auto grid max-w-[1280px] gap-12 px-5 py-24 md:px-8 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Label>{t('stream_kicker')}</Label>
-          <h2 className="display mt-6 text-[48px] md:text-[72px]">{t('stream_title')}</h2>
+          <h2 className="display mt-6 text-[48px] md:text-[72px]">
+            {t.rich('stream_title', { mint: mintLine })}
+          </h2>
         </div>
 
         <ol className="border-l lg:col-span-7">

@@ -70,7 +70,7 @@ export default function HeroSection() {
             </Link>
             <a
               href="#subjects"
-              className="label-mono inline-flex min-h-12 items-center rounded-cta border border-white/40 px-7 text-white transition-colors hover:border-mint hover:text-mint"
+              className="label-mono inline-flex min-h-12 items-center rounded-cta border border-white/40 px-7 font-bold text-white transition-colors hover:border-mint hover:text-mint"
             >
               {t('hero_cta_explore')}
             </a>
@@ -142,8 +142,8 @@ export default function HeroSection() {
                 </motion.li>
               ))}
             </ol>
-            <p className="label-mono absolute bottom-4 left-4 text-mint">● Status / online</p>
-            <p className="label-mono absolute right-4 top-4 text-meta">RAG / active</p>
+            <p className="label-mono absolute bottom-4 left-4 text-mint">{t('readout_status_online')}</p>
+            <p className="label-mono absolute right-4 top-4 text-meta">{t('readout_rag_active')}</p>
           </div>
         </div>
       </div>

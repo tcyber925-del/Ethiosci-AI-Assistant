@@ -111,7 +111,7 @@ export const motion = {
  *
  * Tailwind (`tailwind.config.ts`) imports this directly — these names are the
  * only color/radius vocabulary allowed in marketing markup. Hex values for
- * `ink`/`slate`/`mint`/`violet`/`meta`/`soft`/`link` match the canonical
+ * `ink`/`slate`/`mint`/`violet`/`meta`/`soft` match the canonical
  * `colors` above; the four accents carry no hex in their source, so they are
  * converted from their origin oklch coordinates.
  */
@@ -130,8 +130,6 @@ export const marketing = {
   soft: colors.neutral[100],
   /** Hairline rules and default border color (white at 14%). */
   line: 'rgba(255,255,255,.14)',
-  /** Link / hover accent. */
-  link: colors.accentHover,
   /** Subject accent — Mathematics tile, highlights. */
   sun: '#ffe633',
   /** Subject accent — wrong-answer state, highlights. */
@@ -156,5 +154,5 @@ export const marketingTypography = {
     'var(--font-grotesk), var(--font-inter), system-ui, var(--font-ethiopic), \'Noto Sans Ethiopic\', sans-serif',
   /** Technical labels (`.label-mono`). */
   label:
-    'var(--font-spacemono), var(--font-jbmono), \'Courier New\', monospace',
+    'var(--font-spacemono), var(--font-jbmono), var(--font-ethiopic), \'Noto Sans Ethiopic\', \'Courier New\', monospace',
 } as const;

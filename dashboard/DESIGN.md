@@ -10,7 +10,6 @@ colors:
   soft: "#e9e9e9"
   meta: "#949494"
   line: "rgba(255,255,255,.14)"
-  link: "#3860be"
   sun: "#ffe633"
   pink: "#ff74bf"
   flame: "#ff7716"
@@ -19,19 +18,34 @@ typography:
   display:
     fontFamily: "var(--font-anton), Impact, 'Arial Black', var(--font-ethiopic), 'Noto Sans Ethiopic', sans-serif"
     fontWeight: 400
-    fontSize: "clamp(48px, 7vw, 104px)"
+    fontSize: "clamp(40px, 7vw, 120px)"
     lineHeight: 0.9
     letterSpacing: "-0.01em"
   body:
     fontFamily: "var(--font-grotesk), var(--font-inter), system-ui, var(--font-ethiopic), 'Noto Sans Ethiopic', sans-serif"
     fontWeight: 400
     fontSize: "16px"
+    lineHeight: 1.5
   label:
-    fontFamily: "var(--font-spacemono), var(--font-jbmono), 'Courier New', monospace"
+    fontFamily: "var(--font-spacemono), var(--font-jbmono), var(--font-ethiopic), 'Noto Sans Ethiopic', 'Courier New', monospace"
     fontWeight: 400
     fontSize: "11px"
     lineHeight: 1.2
     letterSpacing: "0.18em"
+locales:
+  am:
+    description: "Amharic (lang=\"am\") overrides — fidel needs more leading than the Latin display and no tracking; see Typography → Amharic."
+    display:
+      lineHeight: 1.06
+      letterSpacing: "0"
+      fontWeight: 600
+      fontSynthesis: "none"
+    label:
+      fontSize: "14px"
+      lineHeight: 1.5
+      letterSpacing: "0.04em"
+    body:
+      lineHeight: 1.65
 rounded:
   input: "2px"
   micro: "4px"
@@ -51,6 +65,7 @@ components:
     backgroundColor: "{colors.mint}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
+    fontWeight: 700
     rounded: "{rounded.stage}"
     padding: "0 28px"
     height: "48px"
@@ -58,6 +73,7 @@ components:
     backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
+    fontWeight: 700
     rounded: "{rounded.stage}"
     padding: "0 28px"
     height: "48px"
@@ -65,6 +81,7 @@ components:
     backgroundColor: "transparent"
     textColor: "{colors.white}"
     typography: "{typography.label}"
+    fontWeight: 700
     rounded: "{rounded.cta}"
     padding: "0 28px"
     height: "48px"
@@ -72,6 +89,7 @@ components:
     backgroundColor: "{colors.mint}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
+    fontWeight: 700
     rounded: "{rounded.cta}"
     padding: "0 20px"
     height: "44px"
@@ -79,6 +97,7 @@ components:
     backgroundColor: "{colors.violet}"
     textColor: "{colors.white}"
     typography: "{typography.label}"
+    fontWeight: 700
     rounded: "{rounded.stage}"
     padding: "0 28px"
     height: "48px"
@@ -122,7 +141,7 @@ source-repo provenance.
 **Key Characteristics:**
 - Near-black canvas (`#131313`) with hairline `white/14%` rules as the only dividers
 - Jelly mint (`#3cffd0`) + ultraviolet (`#5200ff`) as hazard-tape accents; saturated color-block tiles, never tint washes
-- Anton uppercase display at line-height 0.9 (48–104px); Space Mono 11px/0.18em kickers and buttons; Space Grotesk body
+- Anton uppercase display at line-height 0.9 (40–120px envelope; per-slot steps in Hierarchy); Space Mono 11px/0.18em kickers and buttons; Space Grotesk body
 - Numbered `NN / Label` section kickers (01–10 from the generated source, 11/12 for the kept Stats + FAQ)
 - Radius ladder 2/4/20/24/30/40 — pills for actions, rounded features for containers
 - Zero shadows, zero gradients; depth by color blocking and image blend modes
@@ -143,9 +162,11 @@ full-strength blocks, never as soft tints.
 ### Tertiary (subject + state accents)
 - **Sun** (`#ffe633`): Mathematics subject tile (with ink text) and highlight blocks.
 - **Flame** (`#ff7716`): Chemistry stream events in the learning-stream feed.
-- **Volt** (`#0c84fa`): Physics subject tile (with white text) and physics stream events.
-- **Pink** (`#ff74bf`): wrong-answer state and pink highlights; never used for success.
-- **Link Blue** (`#3860be`): the one blue — link hover accent, sourced from the app's `accentHover`.
+- **Volt** (`#0c84fa`): Physics subject tile (**with ink text — ink-on-volt measures 4.98:1;
+  white-on-volt is 3.69:1 and therefore large-text-only ≥24px**) and physics stream events.
+- **Pink** (`#ff74bf`): wrong-answer state and pink highlights; never used for success. (There is no
+  link-blue token — it was dead and has been deleted from the frontmatter and `design-system.ts`; mint is
+  the link/hover accent.)
 
 ### Neutral
 - **Ink** (`#131313`): the page ground; also the text color on mint/sun fills (the "inverted" pairing).
@@ -156,6 +177,29 @@ full-strength blocks, never as soft tints.
 - **Meta** (`#949494`): mono kickers, captions, footer meta text — technical readout voice.
 - **Line** (`rgba(255,255,255,.14)`): every hairline — section separators, panel borders, grid texture. The
   dashboard's `rgba(255,255,255,.24)` border token is NOT this surface's norm; marketing markup uses `.14`.
+
+### Contrast (measured)
+
+Ratios below are computed from the tokens on their real backgrounds (WCAG 2.1 relative luminance).
+Text needs 4.5:1 (≥24px or ≥18.66px bold: 3:1); interactive borders need 3:1 (1.4.11).
+
+| Foreground on background | Ratio | Verdict |
+|---|---|---|
+| white `#ffffff` on ink `#131313` | 18.4:1 | ✓ headlines/primary text |
+| soft `#e9e9e9` on ink | 15.1:1 | ✓ body, nav |
+| meta `#949494` on ink | 6.1:1 | ✓ kickers/captions at 11px+ |
+| white on slate `#2d2d2d` | 13.8:1 | ✓ panel text |
+| soft on slate | 11.3:1 | ✓ |
+| meta on slate | 4.5:1 | ✓ (barely — do not go darker) |
+| white on violet `#5200ff` | 7.5:1 | ✓ band text |
+| white/85 on violet | 5.6:1 | ✓ minimum alpha on violet is **0.85** — `white/70` (4.06:1) is banned |
+| ink on mint `#3cffd0` | 14.4:1 | ✓ inverted pairing |
+| mint on ink | 14.4:1 | ✓ accent lines, links, focus ring |
+| ink on sun `#ffe633` | 14.5:1 | ✓ |
+| ink on volt `#0c84fa` | 4.98:1 | ✓ tile text |
+| white on volt | 3.69:1 | **large text only (≥24px)** |
+| violet `#5200ff` on ink | 2.5:1 | **✗ never as text on ink** — fills/blocks only |
+| `rgba(255,255,255,.14)` on ink | 1.5:1 | **structure only** — never an interactive affordance; interactive borders use `white/40` (3.8:1) |
 
 ### Named Rules
 **The Hazard-Tape Rule.** Mint and violet earn their keep as solid fills on action targets and full-bleed
@@ -168,37 +212,68 @@ panels, under headers. If a divider would be thicker or colored, the answer is a
 
 **Display Font:** Anton (weight 400, falling back to Impact / `'Arial Black'` / Ethiopic stacks — `var(--font-anton)`)
 **Body Font:** Space Grotesk (falling back to Inter / system-ui / Ethiopic stacks — `var(--font-grotesk)`)
-**Label/Mono Font:** Space Mono (falling back to JetBrains Mono / Courier New — `var(--font-spacemono)`)
+**Label/Mono Font:** Space Mono (falling back to JetBrains Mono / Ethiopic stacks / Courier New — `var(--font-spacemono)`)
 
 **Character:** A billboard and a readout. Anton shouts the promise in compressed uppercase; Space Mono
-whispers the machine's status in tracked-out 11px caps; Space Grotesk does the quiet explaining. Every stack
-ends in `var(--font-ethiopic)` / `Noto Sans Ethiopic` because the three Latin faces carry no Ethiopic glyphs.
+whispers the machine's status in tracked-out 11px caps; Space Grotesk does the quiet explaining. Every
+stack names `var(--font-ethiopic)` / `'Noto Sans Ethiopic'` before its generic fallback (display, body,
+and label all do; Tailwind's `font-mono` does too) because the three Latin faces carry no Ethiopic
+glyphs — a stack without that entry renders Amharic CTAs as tofu.
+
+### Amharic / Ethiopic
+
+The Latin rules above are tuned for Anton/Space Mono/Space Grotesk; fidel breaks all three assumptions.
+`html[lang='am']` overrides (frontmatter `locales.am`, implemented in `globals.css`):
+
+- **Display** (`html[lang='am'] .display`): `line-height 1.06` (Ethiopic marks occupy ~1.3em — the Latin
+  0.9 clips them), `letter-spacing 0` (negative tracking collides fidel), `font-weight 600` resolved
+  against Noto Sans Ethiopic's variable 100–900 axis, with `font-synthesis: none` so Anton (Latin-only,
+  400) is never faux-bolded.
+- **Label** (`html[lang='am'] .label-mono`): `14px` (11px fidel is illegible), `letter-spacing 0.04em`
+  (0.18em tracking breaks fidel's connected marks), `line-height 1.5`. Uppercase is a no-op for Ethiopic.
+- **Body** (`html[lang='am'] body`): `line-height 1.65` (already shipped).
+- **Amharic showcase** (`AmharicSection` `p[lang="am"]`): `font-ethiopic font-black leading-[1.12]` at
+  52px → 112px — this is a sanctioned undocumented-in-`typography` token; it lives here, not in the Latin
+  ramp.
+- **Constraint:** Amharic display strings run ~0.65em/syllable vs Anton's ~0.42em/char, so long `am`
+  headlines wrap one line earlier than their EN twins — keep them ≤26 syllables or step the size down
+  one breakpoint before shipping.
 
 ### Hierarchy
-- **Display** (Anton 400, `clamp(48px, 7vw, 104px)`, line-height 0.9, letter-spacing -0.01em, uppercase):
-  section headlines and the hero. Hero h1 steps 54px → 80px (`sm`) → 104px (`lg`); section h2 steps
-  48px → 72/80/88px (`md`); closing headline 56px → 104px; subject-tile names 48–96px.
+- **Display** (Anton 400, envelope `clamp(40px, 7vw, 120px)`, line-height 0.9, letter-spacing -0.01em,
+  uppercase): section headlines and the hero. The frontmatter clamp describes the envelope only — sizing is
+  per-slot breakpoint steps: hero h1 54px → 80px (`sm`) → 104px (`lg`); section h2 40px (FAQ) → 48px →
+  72/80/88px (`md`); closing headline 56px → 104px; subject-tile names 48–96px; Amharic showcase 52→112 /
+  56→120 (see Amharic / Ethiopic).
 - **Headline** (Space Grotesk 600–700, 18–24px, line-height ~1.2): in-panel titles, footer column heads set
   in label mono instead, stat values.
-- **Title** (Space Grotesk 500–600, 16–18px): card titles, quiz options, ledes (`text-lg` 18px).
-- **Body** (Space Grotesk 400, 16px, line-height 1.5–1.6): paragraphs; footer meta at 14px (`text-sm`).
+- **Title** (Space Grotesk 500–600, 16–18px): card titles, quiz options, FAQ questions (16px triggers),
+  ledes (`text-lg` 18px).
+- **Body** (Space Grotesk 400, 16px, line-height 1.5 — `leading-relaxed` 1.625 in the demo answer and footer
+  meta): paragraphs; footer meta at 14px (`text-sm`).
 - **Label** (Space Mono 400, 11px, letter-spacing 0.18em, uppercase, line-height 1.2): section kickers, nav
   links, all buttons, diagram chips, status readouts. Buttons add weight 700.
 
 ### Named Rules
 **The Numbered-Kicker Rule.** Every section opens with a mono kicker in the form `NN / Label` (`01 / Ask
-EthioSci` … `10 / Learning stream`, then `11 / Live data` and `12 / Answers` for the two kept sections). The
-number is a two-digit ordinal of the page composition, not a heading level; the same mono voice doubles as the
-in-panel readout (`RAG / Active`, `Mode / learn`).
+EthioSci` … `10 / Learning stream`, then `11 / Live data` and `12 / Answers` for the two kept sections).
+Two documented departures: **Audiences** carries its kickers per card (`07 / For teachers`, `08 / For
+parents`) because the cards are its units, and the full-bleed **Closing** band has no kicker — its Anton h2
+opens the polarity flip directly. The number is a two-digit ordinal of the page composition, not a heading
+level; the same mono voice doubles as the in-panel readout (`RAG / active`, `Mode / learn`), which renders
+from `landing.*` keys so it translates.
 **The One-Face-Per-Job Rule.** Anton is uppercase display only — never body, never small UI. Space Mono is
-labels and buttons only. Body sentences are always Space Grotesk. The dashboard's Impact/.verge-display face
+labels and command buttons only; content-bearing disclosure controls (the FAQ questions) use the Title style
+in the body face instead. Body sentences are always Space Grotesk. The dashboard's Impact/.verge-display face
 is a different world and must not appear on marketing surfaces.
 
 ## Layout
 
 A single spatial model down the whole page: a `max-w-[1280px]` centered container with 20px gutters (`px-5`,
 32px from `md` up), twelve columns at `lg`, and a 96px vertical section rhythm (`py-24`) with a 1px
-`line` top border on every section (16 `border-t` separators across the composition).
+`line` top border on every section (verified: 19 `border-t` occurrences in markup — 11 section tops, the
+footer's two rules, the mobile-menu divider, three `LazySections` loading placeholders, and two in-panel
+rules; the rule is normative, the count informational).
 
 - **Section skeleton (in order):** kicker → Anton h2 (one mint line) → content → hairline. Hero breaks it:
   three mono kicker lines staggered 120ms, then the three-line h1.
@@ -220,11 +295,14 @@ sticky header, which ships `bg-ink/95 + backdrop-blur-md` — a legibility devic
 element (the direction contract said no glassmorphism; the build wins, and this is the only place it appears).
 
 Focus is the system's only "raised" moment: `outline: 2px solid #3cffd0` with 3px offset on every
-`:focus-visible` inside the marketing surface.
+`:focus-visible` inside the marketing surface. On mint grounds the ring flips to ink
+(`focus-visible:outline-ink` on the Closing band CTAs) — mint-on-mint would be a 1:1 outline.
 
 ### Named Rules
-**The No-Shadow Rule.** No `box-shadow`, no gradients, no glows anywhere on this surface. If two things need
-separating, use a hairline; if a section needs lifting, change its background color.
+**The No-Shadow Rule.** No `box-shadow`, no color gradients, no glows anywhere on this surface. If two things
+need separating, use a hairline; if a section needs lifting, change its background color. Two exceptions
+ship: the sticky header's `backdrop-blur-md` (chrome legibility) and `.sci-grid`'s two 1px `white/14%`
+measuring lines (line token, not a color blend).
 
 ## Shapes
 
@@ -233,7 +311,8 @@ chips), 20px (chat bubbles, quiz options), 24px (feature panels, subject tiles, 
 (primary buttons), 40px (secondary buttons, header CTA pill), pill/full (status dots, progress bars, the
 hamburger button). Only the full-bleed section bands are square-cornered, because they run edge to edge.
 
-Borders are always 1px hairlines (`line`, or `white/40` for the secondary button's stronger outline); imagery
+Borders are always 1px hairlines (`line`, or `white/40` for interactive affordances that must
+clear 3:1 — the secondary button and quiz options); imagery
 is always clipped by its rounded container (`overflow-hidden`) with a border, never floated unframed. Nothing
 gets a bevel, an inner ring, or a cut corner.
 
@@ -253,13 +332,17 @@ container sits at 20–24px. Never put a container radius on a button or a pill 
   ink fill / mint text).
 - **Header CTA:** mint, `rounded-cta`, `px-5`, `min-h-11` (44px), auth-aware target (`/v2/overview` when
   logged in, `/login` otherwise); hover to white.
-- **Focus:** global mint 2px outline, 3px offset. Touch targets ≥44px (`min-h-11`/`min-h-12`).
+- **Quiz actions:** in-card text buttons on the quiz stage — `min-h-11`, `px-4`, label-mono 700;
+  **Try again** = hairline border (hover mint border/text), **Next question** = mint border/text
+  (hover mint fill / ink text) with a trailing `→`.
+- **Focus:** global mint 2px outline, 3px offset (ink flip on mint grounds — see Elevation & Depth).
+  Touch targets ≥44px (`min-h-11`/`min-h-12`).
 
 ### Chips
 - **Hero diagram steps:** `rounded-input` (2px) ink chips, `px-2 py-1`, label-mono white, prefixed with a
   two-digit ordinal — one per pipeline stage, laid over the SVG.
 - **Status readouts:** bare label-mono (`● Status / online`, `RAG / active`) pinned to the hero panel corners,
-  mint or meta colored.
+  mint or meta colored; word-bearing readouts render from `landing.*` keys (copy), never as literals.
 
 ### Cards / Containers
 - **Corner Style:** `rounded-feature` (24px) for panels/tiles/frames; `rounded-card` (20px) for inner items.
@@ -269,15 +352,19 @@ container sits at 20–24px. Never put a container radius on a button or a pill 
 - **Internal Padding:** 20–32px (`p-5` / `p-6` / `p-8`).
 - **Subject tiles:** full-strength tone with the image beneath the type at `opacity-40 mix-blend-luminosity`,
   rising to `opacity-70` over 500ms on hover; mono index `01 /` and formula sit top row, Anton name bottom.
-- **Quiz stage:** ink panel on the violet band — progress bar (pill track `bg-slate`, mint fill,
-  `transition-all duration-700`), options below.
+- **Quiz stage:** ink panel on the violet band — two real questions; the counter reads `Question N of 2`
+  and advances only with the question (progress bar 50% → 100%), options below (inert options after an
+  answer are `aria-disabled` at `opacity-60`, never `disabled`, so focus is not dropped).
 
 ### Inputs / Fields
 There are no text inputs on this surface. Two controls stand in:
 - **Language toggle (EN/AM):** track `rounded-input` (2px), slate fill, 1px `line` border, `p-0.5`; segments
-  are mono `text-xs` with `px-2.5 py-1` — active segment mint fill + ink bold text, inactive meta text going
-  white on hover; `role="group"` + `aria-pressed`.
-- **Quiz option:** `rounded-card` (20px), 1px `line` border, `min-h-14` (56px), `px-5`, 18px text, left
+  are mono `text-sm` with `px-4` and `min-h-11` (44px — the button floor applies to this control too; it
+  previously measured 63×24px), active segment mint fill + ink bold text, inactive meta text going white on
+  hover; `role="group"` + `aria-pressed`.
+- **Quiz option:** `rounded-card` (20px), 1px `white/40` border (the 3:1 interactive-affordance
+  floor — structural hairlines stay `.14`; `white/40` on ink measures 3.8:1), `min-h-14` (56px),
+  `px-5`, 18px text, left
   aligned. States: default (white text) → hover border mint → correct `scale-[1.02]` mint fill + ink text →
   wrong border/text pink. Transitions 300ms.
 
@@ -308,15 +395,22 @@ There are no text inputs on this surface. Two controls stand in:
 ## Do's and Don'ts
 
 ### Do:
-- **Do** open every section with the numbered mono kicker `NN / Label` and an Anton h2 that carries exactly
-  one mint line.
+- **Do** open every section with the numbered mono kicker `NN / Label` (Audiences: per card; Closing band:
+  the documented no-kicker exception) and an Anton h2 that carries exactly one mint line. Ground exceptions:
+  the Closing band h2 and the parent-audience card headline sit on `bg-mint`, where a mint line cannot read —
+  the teacher card's last word carries it instead. Structural exception: the Amharic showcase is a type
+  specimen and ships no section h2 (Hero keeps its h1).
 - **Do** separate sections and panels with 1px `rgba(255,255,255,.14)` rules on the `#131313` ground.
-- **Do** use the marketing token vocabulary only — `ink / slate / mint / violet / meta / soft / line / link /
+- **Do** use the marketing token vocabulary only — `ink / slate / mint / violet / meta / soft / line /
   sun / pink / flame / volt` and radii `input / micro / card / feature / stage / cta` (the names exported
-  from `design-system.ts` are the only color/radius vocabulary allowed in marketing markup).
+  from `design-system.ts` are the only color/radius vocabulary allowed in marketing markup; there is no
+  link-blue token — mint is the link/hover accent).
 - **Do** ship bilingual parity: every `landing.*` key exists in both `messages/en.json` and `messages/am.json`
-  (175 keys each, strict parity), and EN/AM ship together in the same change. Mono notation (`09 / Lang /
-  EN + AM`, `RAG / Active`) stays literal in both locales.
+  (185 keys each, strict parity), and EN/AM ship together in the same change. Mono notation made of numerals,
+  units, symbols, and fixed codes (`09 /`, `EN + AM`, `→`, `F = ma`) — plus product/technique names
+  (`LangGraph`, `Hybrid RAG`, `Dense + BM25`, `Cross-encoder`) — stays literal in both locales; word-bearing
+  readouts and tags (`RAG / active`, `● Status / online`, `Mode / learn`, `RAG / Verified / Curriculum
+  grounded`, `Claim verification`) come from `landing.*` keys so Amharic ships them too.
 - **Do** honor the floor of the accessibility brief: 44px minimum targets, mint focus-visible outline,
   `prefers-reduced-motion` (CSS `anim-*` disabled; framer reveals follow `reducedMotion="user"`), semantic
   heading order, and Ethiopic fallback in every font stack.
@@ -326,8 +420,9 @@ There are no text inputs on this surface. Two controls stand in:
   auth-aware.
 
 ### Don't:
-- **Don't** add shadows, gradients, glows, or glass panels anywhere — including on cards and buttons. The
-  sticky header's `backdrop-blur-md` is the single sanctioned exception.
+- **Don't** add shadows, gradients, glows, or glass panels anywhere — including on cards and buttons. Two
+  sanctioned exceptions: the sticky header's `backdrop-blur-md`, and `.sci-grid`'s hairline measuring texture
+  (line token, not a color gradient).
 - **Don't** put Anton on body copy or labels, or Space Mono on sentences (One-Face-Per-Job).
 - **Don't** dilute mint/violet into translucent washes or use them as body-text colors (Hazard-Tape Rule);
   keep accents under roughly a tenth of any viewport except the two sanctioned full-bleed bands.
@@ -336,6 +431,8 @@ There are no text inputs on this surface. Two controls stand in:
   an em dash plus `stats_error` on failure (the fabricated fallback numbers were removed; the live badge
   appears only when counts are actually in). This surface's cleanup is the pattern to repeat.
 - **Don't** hardcode copy in components — all visible strings come from `messages/*` under the `landing.`
-  namespace; JSON-Ld/SEO literals are the documented exception.
+  namespace. The only exceptions are JSON-Ld/SEO literals, mono notation that is pure numerals/units/symbols
+  (`09 /`, `F = ma`), and product/technique names (`LangGraph`, `Hybrid RAG`); a status readout or tag
+  containing English words is copy, not notation.
 - **Don't** reuse dashboard-world faces or token names on this surface (Impact/.verge-display, `v2-*`,
   `primary`, `border` at white/.24) — they belong to the app shell outside `.mk-surface`.
