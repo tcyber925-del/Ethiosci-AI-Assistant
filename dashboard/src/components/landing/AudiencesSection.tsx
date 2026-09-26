@@ -28,7 +28,7 @@ export default async function AudiencesSection() {
             <div className="flex flex-col justify-between p-6 md:p-8">
               <div>
                 <Label>{t('aud_kicker_teacher')}</Label>
-                <p className="display mt-6 text-4xl leading-tight">
+                <h2 className="display mt-6 text-4xl leading-tight">
                   {teacherWords.map((key, i) => (
                     <span key={key} className="block">
                       {i === teacherWords.length - 1 ? (
@@ -38,7 +38,7 @@ export default async function AudiencesSection() {
                       )}
                     </span>
                   ))}
-                </p>
+                </h2>
               </div>
               <ul className="mt-8 space-y-2 text-soft">
                 {teacherItems.map((key) => (
@@ -61,7 +61,7 @@ export default async function AudiencesSection() {
             />
             <div className="p-6 md:p-8">
               <p className="label-mono">{t('aud_kicker_parent')}</p>
-              <p className="display mt-4 text-4xl">{t('aud_parent_words')}</p>
+              <h2 className="display mt-4 text-4xl">{t('aud_parent_words')}</h2>
               <ul className="mt-6 space-y-2 font-medium">
                 {parentItems.map((key) => (
                   <li key={key}>— {t(key)}</li>

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import { useInView } from '@/hooks/useInView'
 import { Label } from './Reveal'
+import { mintLine } from './mint-line'
 
 /**
  * "05 / Student journey" — seven steps along a rule that draws itself on
@@ -36,7 +37,9 @@ export default function JourneySection() {
     <section className="border-t">
       <div className="mx-auto max-w-[1280px] px-5 py-24 md:px-8">
         <Label>{t('journ_kicker')}</Label>
-        <h2 className="display mt-6 text-[48px] md:text-[80px]">{t('journ_title')}</h2>
+        <h2 className="display mt-6 text-[48px] md:text-[80px]">
+          {t.rich('journ_title', { mint: mintLine })}
+        </h2>
 
         <div ref={ref} className="relative mt-16">
           <div className="absolute left-[7px] top-0 h-full w-px bg-line md:left-0 md:top-[7px] md:h-px md:w-full" />

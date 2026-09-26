@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T17:44:56Z",
+  "generatedAt": "2026-09-26T17:56:04Z",
   "title": "Design System: EthioSci (Marketing Surface)",
   "extensions": {
     "colorMeta": {
@@ -8,85 +8,187 @@
         "role": "primary",
         "displayName": "Jelly Mint",
         "canonical": "#3cffd0",
-        "tonalRamp": ["#007e60", "#00ad83", "#00dca7", "#0dffc5", "#3cffd0", "#63ffd9", "#8affe3", "#b1ffec"]
+        "tonalRamp": [
+          "#007e60",
+          "#00ad83",
+          "#00dca7",
+          "#0dffc5",
+          "#3cffd0",
+          "#63ffd9",
+          "#8affe3",
+          "#b1ffec"
+        ]
       },
       "violet": {
         "role": "secondary",
         "displayName": "Ultraviolet",
         "canonical": "#5200ff",
-        "tonalRamp": ["#210066", "#2d008c", "#3900b2", "#4600d9", "#5200ff", "#7533ff", "#9766ff", "#ba99ff"]
+        "tonalRamp": [
+          "#210066",
+          "#2d008c",
+          "#3900b2",
+          "#4600d9",
+          "#5200ff",
+          "#7533ff",
+          "#9766ff",
+          "#ba99ff"
+        ]
       },
       "white": {
         "role": "neutral",
         "displayName": "Hazard White",
         "canonical": "#ffffff",
-        "tonalRamp": ["#0d0d0d", "#282828", "#434343", "#757575", "#a8a8a8", "#c9c9c9", "#e4e4e4", "#ffffff"]
+        "tonalRamp": [
+          "#0d0d0d",
+          "#282828",
+          "#434343",
+          "#757575",
+          "#a8a8a8",
+          "#c9c9c9",
+          "#e4e4e4",
+          "#ffffff"
+        ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Canvas Ink",
         "canonical": "#131313",
-        "tonalRamp": ["#080808", "#0a0a0a", "#0d0d0d", "#101010", "#131313", "#424242", "#717171", "#a1a1a1"]
+        "tonalRamp": [
+          "#080808",
+          "#0a0a0a",
+          "#0d0d0d",
+          "#101010",
+          "#131313",
+          "#424242",
+          "#717171",
+          "#a1a1a1"
+        ]
       },
       "slate": {
         "role": "neutral",
         "displayName": "Surface Slate",
         "canonical": "#2d2d2d",
-        "tonalRamp": ["#121212", "#191919", "#202020", "#262626", "#2d2d2d", "#575757", "#818181", "#ababab"]
+        "tonalRamp": [
+          "#121212",
+          "#191919",
+          "#202020",
+          "#262626",
+          "#2d2d2d",
+          "#575757",
+          "#818181",
+          "#ababab"
+        ]
       },
       "soft": {
         "role": "neutral",
         "displayName": "Body Soft",
         "canonical": "#e9e9e9",
-        "tonalRamp": ["#5d5d5d", "#808080", "#a3a3a3", "#c6c6c6", "#e9e9e9", "#ededed", "#f2f2f2", "#f6f6f6"]
+        "tonalRamp": [
+          "#5d5d5d",
+          "#808080",
+          "#a3a3a3",
+          "#c6c6c6",
+          "#e9e9e9",
+          "#ededed",
+          "#f2f2f2",
+          "#f6f6f6"
+        ]
       },
       "meta": {
         "role": "neutral",
         "displayName": "Readout Meta",
         "canonical": "#949494",
-        "tonalRamp": ["#3b3b3b", "#515151", "#686868", "#7e7e7e", "#949494", "#a9a9a9", "#bfbfbf", "#d4d4d4"]
+        "tonalRamp": [
+          "#3b3b3b",
+          "#515151",
+          "#686868",
+          "#7e7e7e",
+          "#949494",
+          "#a9a9a9",
+          "#bfbfbf",
+          "#d4d4d4"
+        ]
       },
       "line": {
         "role": "neutral",
         "displayName": "Hairline",
         "canonical": "rgba(255,255,255,.14)",
-        "tonalRamp": ["rgba(255,255,255,.06)", "rgba(255,255,255,.10)", "rgba(255,255,255,.14)", "rgba(255,255,255,.22)", "rgba(255,255,255,.32)", "rgba(255,255,255,.45)", "rgba(255,255,255,.62)", "rgba(255,255,255,.80)"]
-      },
-      "link": {
-        "role": "tertiary",
-        "displayName": "Link Blue",
-        "canonical": "#3860be",
-        "tonalRamp": ["#16264c", "#1f3569", "#274385", "#3052a2", "#3860be", "#5c7ecf", "#859edb", "#adbfe7"]
+        "tonalRamp": [
+          "rgba(255,255,255,.06)",
+          "rgba(255,255,255,.10)",
+          "rgba(255,255,255,.14)",
+          "rgba(255,255,255,.22)",
+          "rgba(255,255,255,.32)",
+          "rgba(255,255,255,.45)",
+          "rgba(255,255,255,.62)",
+          "rgba(255,255,255,.80)"
+        ]
       },
       "sun": {
         "role": "tertiary",
         "displayName": "Math Sun",
         "canonical": "#ffe633",
-        "tonalRamp": ["#7a6b00", "#a89400", "#d6bc00", "#ffe005", "#ffe633", "#ffeb5c", "#fff085", "#fff5ad"]
+        "tonalRamp": [
+          "#7a6b00",
+          "#a89400",
+          "#d6bc00",
+          "#ffe005",
+          "#ffe633",
+          "#ffeb5c",
+          "#fff085",
+          "#fff5ad"
+        ]
       },
       "pink": {
         "role": "tertiary",
         "displayName": "Wrong-Answer Pink",
         "canonical": "#ff74bf",
-        "tonalRamp": ["#940050", "#cc006e", "#ff058c", "#ff3ca5", "#ff74bf", "#ff90cc", "#ffacd9", "#ffc7e5"]
+        "tonalRamp": [
+          "#940050",
+          "#cc006e",
+          "#ff058c",
+          "#ff3ca5",
+          "#ff74bf",
+          "#ff90cc",
+          "#ffacd9",
+          "#ffc7e5"
+        ]
       },
       "flame": {
         "role": "tertiary",
         "displayName": "Chemistry Flame",
         "canonical": "#ff7716",
-        "tonalRamp": ["#6f2e00", "#983f00", "#c25100", "#eb6200", "#ff7716", "#ff9245", "#ffad73", "#ffc9a2"]
+        "tonalRamp": [
+          "#6f2e00",
+          "#983f00",
+          "#c25100",
+          "#eb6200",
+          "#ff7716",
+          "#ff9245",
+          "#ffad73",
+          "#ffc9a2"
+        ]
       },
       "volt": {
         "role": "tertiary",
         "displayName": "Physics Volt",
         "canonical": "#0c84fa",
-        "tonalRamp": ["#023567", "#03498d", "#045cb4", "#0470da", "#0c84fa", "#3d9dfb", "#6db5fc", "#9ecefd"]
+        "tonalRamp": [
+          "#023567",
+          "#03498d",
+          "#045cb4",
+          "#0470da",
+          "#0c84fa",
+          "#3d9dfb",
+          "#6db5fc",
+          "#9ecefd"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Anton Display",
-        "purpose": "Uppercase billboard headlines only: hero h1 (54-104px), section h2 (48-88px), subject-tile names, EthioSci wordmark. Line-height 0.9."
+        "purpose": "Uppercase billboard headlines: hero h1 54→80→104px, section h2 40px (FAQ) →48→72/80/88px, closing 56→104px, subject-tile names 48–96px, Amharic showcase 52→112 / 56→120. Line-height 0.9 (1.06 under lang=am)."
       },
       "body": {
         "displayName": "Space Grotesk Body",
@@ -141,11 +243,33 @@
       }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "640px" },
-      { "name": "md", "value": "768px" },
-      { "name": "lg", "value": "1024px" },
-      { "name": "xl", "value": "1280px" }
-    ]
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "states": {
+      "hover": "nav links / secondary buttons → mint accent; primary button background → white; quiz options → mint border",
+      "focus-visible": "2px solid #3cffd0 outline (system focus moment; see Elevation & Depth)",
+      "disabled": "quiz options set disabled + aria-checked once answered; answer feedback announced via aria-live",
+      "scroll": "sticky header compresses after 40px (py-5 → py-2, 300ms)"
+    },
+    "zIndex": {
+      "sticky-header": 50,
+      "note": "The sticky marketing header (z-50) is the only stacking layer on this surface."
+    }
   },
   "components": [
     {
@@ -186,7 +310,7 @@
       "refersTo": "button-primary",
       "description": "Saturated color-block tile in the Subjects mosaic; image sits under the type at 40% luminosity blend, lifting to 70% on hover. Tones: mint, violet, volt, sun.",
       "html": "<a class=\"ds-tile ds-tile--violet\" href=\"#subjects\"><img class=\"ds-tile__img\" src=\"/landing/chemistry.jpg\" alt=\"\" /><div class=\"ds-tile__meta\"><span>02 / Subject</span><span>Na&#8314; + Cl&#8315;</span></div><div class=\"ds-tile__foot\"><h3 class=\"ds-tile__name\">Chemistry</h3><p class=\"ds-tile__note\">Reactions, atoms, and the periodic table.</p><span class=\"ds-tile__link\">Explore &#8594;</span></div></a>",
-      "css": ".ds-tile { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; padding: 24px; overflow: hidden; border-radius: 24px; background: #3cffd0; color: #131313; text-decoration: none; font-family: 'Space Grotesk', system-ui, sans-serif; } .ds-tile--violet { background: #5200ff; color: #ffffff; } .ds-tile--volt { background: #0c84fa; color: #ffffff; } .ds-tile--sun { background: #ffe633; color: #131313; } .ds-tile__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; mix-blend-mode: luminosity; transition: opacity .5s ease; } .ds-tile:hover .ds-tile__img { opacity: 0.7; } .ds-tile__meta { position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; font-family: 'Space Mono', 'Courier New', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; } .ds-tile__foot { position: relative; } .ds-tile__name { margin: 0; font-family: 'Anton', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 64px; line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; } .ds-tile__note { margin: 8px 0 0; max-width: 20rem; font-size: 16px; font-weight: 500; } .ds-tile__link { display: inline-flex; margin-top: 20px; padding-bottom: 4px; border-bottom: 1px solid currentColor; font-family: 'Space Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; } .ds-tile:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
+      "css": ".ds-tile { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; padding: 24px; overflow: hidden; border-radius: 24px; background: #3cffd0; color: #131313; text-decoration: none; font-family: 'Space Grotesk', system-ui, sans-serif; } .ds-tile--violet { background: #5200ff; color: #ffffff; } .ds-tile--volt { background: #0c84fa; color: #131313; } .ds-tile--sun { background: #ffe633; color: #131313; } .ds-tile__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; mix-blend-mode: luminosity; transition: opacity .5s ease; } .ds-tile:hover .ds-tile__img { opacity: 0.7; } .ds-tile__meta { position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; font-family: 'Space Mono', 'Courier New', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; } .ds-tile__foot { position: relative; } .ds-tile__name { margin: 0; font-family: 'Anton', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 64px; line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; } .ds-tile__note { margin: 8px 0 0; max-width: 20rem; font-size: 16px; font-weight: 500; } .ds-tile__link { display: inline-flex; margin-top: 20px; padding-bottom: 4px; border-bottom: 1px solid currentColor; font-family: 'Space Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; } .ds-tile:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
     },
     {
       "name": "Quiz Option",
@@ -194,7 +318,7 @@
       "refersTo": "button-secondary",
       "description": "Selectable answer row on the violet quiz band: hairline default, mint hover, mint-fill correct (scaled), pink wrong.",
       "html": "<button class=\"ds-quiz-option\" aria-pressed=\"false\">Mitosis</button>",
-      "css": ".ds-quiz-option { display: flex; align-items: center; width: 100%; min-height: 56px; padding: 0 20px; background: transparent; color: #ffffff; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 20px; cursor: pointer; transition: border-color .3s ease, transform .3s ease, background .3s ease, color .3s ease; } .ds-quiz-option:hover { border-color: #3cffd0; } .ds-quiz-option.is-correct { transform: scale(1.02); border-color: #3cffd0; background: #3cffd0; color: #131313; } .ds-quiz-option.is-wrong { border-color: #ff74bf; color: #ff74bf; } .ds-quiz-option:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
+      "css": ".ds-quiz-option { display: flex; align-items: center; width: 100%; min-height: 56px; padding: 0 20px; background: transparent; color: #ffffff; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 20px; cursor: pointer; transition: border-color .3s ease, transform .3s ease, background .3s ease, color .3s ease; } .ds-quiz-option:hover { border-color: #3cffd0; } .ds-quiz-option.is-correct { transform: scale(1.02); border-color: #3cffd0; background: #3cffd0; color: #131313; } .ds-quiz-option.is-wrong { border-color: #ff74bf; color: #ff74bf; } .ds-quiz-option:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
     },
     {
       "name": "Marketing Header",
@@ -208,9 +332,9 @@
       "name": "Language Toggle (EN/AM)",
       "kind": "input",
       "refersTo": "panel",
-      "description": "Bilingual locale toggle in the marketing header and mobile menu: slate track with 2px corners, mint active segment, mono labels from messages.",
+      "description": "Bilingual locale toggle in the marketing header and mobile menu: slate track with 2px corners, mint active segment, 44px mono segments (min-h-11 px-4 text-sm) meeting the touch floor, mono labels from messages.",
       "html": "<div class=\"ds-lang-toggle\" role=\"group\" aria-label=\"Language\"><button type=\"button\" aria-pressed=\"true\">English</button><button type=\"button\" aria-pressed=\"false\">Amharic</button></div>",
-      "css": ".ds-lang-toggle { display: inline-flex; gap: 2px; padding: 4px; background: #2d2d2d; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 2px; } .ds-lang-toggle button { padding: 4px 10px; background: transparent; border: none; border-radius: 2px; font-family: 'Space Mono', 'Courier New', monospace; font-size: 12px; color: #949494; cursor: pointer; transition: all .15s ease; } .ds-lang-toggle button:hover { color: #ffffff; } .ds-lang-toggle button[aria-pressed=\"true\"] { background: #3cffd0; color: #131313; font-weight: 700; } .ds-lang-toggle button:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
+      "css": ".ds-lang-toggle { display: inline-flex; gap: 2px; padding: 4px; background: #2d2d2d; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 2px; } .ds-lang-toggle button { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; background: transparent; border: none; border-radius: 2px; font-family: 'Space Mono', 'Courier New', monospace; font-size: 14px; color: #949494; cursor: pointer; transition: all .15s ease; } .ds-lang-toggle button:hover { color: #ffffff; } .ds-lang-toggle button[aria-pressed=\"true\"] { background: #3cffd0; color: #131313; font-weight: 700; } .ds-lang-toggle button:focus-visible { outline: 2px solid #3cffd0; outline-offset: 3px; }"
     }
   ],
   "narrative": {
@@ -219,7 +343,7 @@
     "keyCharacteristics": [
       "Near-black canvas (`#131313`) with hairline `white/14%` rules as the only dividers",
       "Jelly mint (`#3cffd0`) + ultraviolet (`#5200ff`) as hazard-tape accents; saturated color-block tiles, never tint washes",
-      "Anton uppercase display at line-height 0.9 (48–104px); Space Mono 11px/0.18em kickers and buttons; Space Grotesk body",
+      "Anton uppercase display at line-height 0.9 (40–120px envelope; per-slot steps in Typography); Space Mono 11px/0.18em kickers and buttons; Space Grotesk body",
       "Numbered `NN / Label` section kickers (01–10 from the generated source, 11/12 for the kept Stats + FAQ)",
       "Radius ladder 2/4/20/24/30/40 — pills for actions, rounded features for containers",
       "Zero shadows, zero gradients; depth by color blocking and image blend modes",
@@ -228,7 +352,7 @@
     "rules": [
       {
         "name": "The Hazard-Tape Rule",
-        "body": "Mint and violet earn their keep as solid fills on action targets and full-bleed bands, and as single accent lines in display headlines. Never dilute them into translucent washes, glows, or gradient stops.",
+        "body": "Mint and violet earn their keep as solid fills on action targets and full-bleed bands, and as single accent lines in display headlines. Never dilute them into translucent washes, glows, or gradient stops. **The Hairline Rule.** Structure is drawn with 1px `rgba(255,255,255,.14)` rules — between sections, around panels, under headers. If a divider would be thicker or colored, the answer is a color block instead.",
         "section": "colors"
       },
       {
@@ -238,7 +362,7 @@
       },
       {
         "name": "The Numbered-Kicker Rule",
-        "body": "Every section opens with a mono kicker in the form `NN / Label` (`01 / Ask EthioSci` … `10 / Learning stream`, then `11 / Live data` and `12 / Answers` for the two kept sections). The number is a two-digit ordinal of the page composition, not a heading level; the same mono voice doubles as the in-panel readout (`RAG / Active`, `Mode / learn`).",
+        "body": "Every section opens with a mono kicker in the form `NN / Label` (`01 / Ask EthioSci` … `10 / Learning stream`, then `11 / Live data` and `12 / Answers` for the two kept sections). Two documented departures: **Audiences** carries its kickers per card (`07 / For teachers`, `08 / For parents`) because the cards are its units, and the full-bleed **Closing** band has no kicker — its Anton h2 opens the polarity flip directly. The number is a two-digit ordinal of the page composition, not a heading level; the same mono voice doubles as the in-panel readout (`RAG / active`, `Mode / learn`), which renders from `landing.*` keys so it translates. **The One-Face-Per-Job Rule.** Anton is uppercase display only — never body, never small UI. Space Mono is labels and buttons only. Body sentences are always Space Grotesk. The dashboard's Impact/.verge-display face is a different world and must not appear on marketing surfaces.",
         "section": "typography"
       },
       {
@@ -248,7 +372,7 @@
       },
       {
         "name": "The No-Shadow Rule",
-        "body": "No `box-shadow`, no gradients, no glows anywhere on this surface. If two things need separating, use a hairline; if a section needs lifting, change its background color.",
+        "body": "No `box-shadow`, no color gradients, no glows anywhere on this surface. If two things need separating, use a hairline; if a section needs lifting, change its background color. Two exceptions ship: the sticky header's `backdrop-blur-md` (chrome legibility) and `.sci-grid`'s two 1px `white/14%` measuring lines (line token, not a color blend).",
         "section": "elevation"
       },
       {
@@ -258,20 +382,20 @@
       }
     ],
     "dos": [
-      "**Do** open every section with the numbered mono kicker `NN / Label` and an Anton h2 that carries exactly one mint line.",
-      "**Do** separate sections and panels with 1px `rgba(255,255,255,.14)` rules on the `#131313` ground.",
-      "**Do** use the marketing token vocabulary only — `ink / slate / mint / violet / meta / soft / line / link / sun / pink / flame / volt` and radii `input / micro / card / feature / stage / cta` (the names exported from `design-system.ts` are the only color/radius vocabulary allowed in marketing markup).",
-      "**Do** ship bilingual parity: every `landing.*` key exists in both `messages/en.json` and `messages/am.json` (175 keys each, strict parity), and EN/AM ship together in the same change. Mono notation (`09 / Lang / EN + AM`, `RAG / Active`) stays literal in both locales.",
-      "**Do** honor the floor of the accessibility brief: 44px minimum targets, mint focus-visible outline, `prefers-reduced-motion` (CSS `anim-*` disabled; framer reveals follow `reducedMotion=\"user\"`), semantic heading order, and Ethiopic fallback in every font stack.",
-      "**Do** treat imagery as material: generated rasters sit under type at 40–45% opacity with `mix-blend-luminosity`, always clipped by a rounded, bordered container, lazy-loaded below the fold.",
-      "**Do** route CTAs to role-first sign-up (`/sign-up?role=learner|teacher|parent`) and let the header pill be auth-aware."
+      "- **Do** open every section with the numbered mono kicker `NN / Label` (Audiences: per card; Closing band: the documented no-kicker exception) and an Anton h2 that carries exactly one mint line. Ground exceptions: the Closing band h2 and the parent-audience card headline sit on `bg-mint`, where a mint line cannot read — the teacher card's last word carries it instead. Structural exception: the Amharic showcase is a type specimen and ships no section h2 (Hero keeps its h1).",
+      "- **Do** separate sections and panels with 1px `rgba(255,255,255,.14)` rules on the `#131313` ground.",
+      "- **Do** use the marketing token vocabulary only — `ink / slate / mint / violet / meta / soft / line / sun / pink / flame / volt` and radii `input / micro / card / feature / stage / cta` (the names exported from `design-system.ts` are the only color/radius vocabulary allowed in marketing markup; there is no link-blue token — mint is the link/hover accent).",
+      "- **Do** ship bilingual parity: every `landing.*` key exists in both `messages/en.json` and `messages/am.json` (185 keys each, strict parity), and EN/AM ship together in the same change. Mono notation made of numerals, units, symbols, and fixed codes (`09 /`, `EN + AM`, `→`, `F = ma`) — plus product/technique names (`LangGraph`, `Hybrid RAG`, `Dense + BM25`, `Cross-encoder`) — stays literal in both locales; word-bearing readouts and tags (`RAG / active`, `● Status / online`, `Mode / learn`, `RAG / Verified / Curriculum grounded`, `Claim verification`) come from `landing.*` keys so Amharic ships them too.",
+      "- **Do** honor the floor of the accessibility brief: 44px minimum targets, mint focus-visible outline, `prefers-reduced-motion` (CSS `anim-*` disabled; framer reveals follow `reducedMotion=\"user\"`), semantic heading order, and Ethiopic fallback in every font stack.",
+      "- **Do** treat imagery as material: generated rasters sit under type at 40–45% opacity with `mix-blend-luminosity`, always clipped by a rounded, bordered container, lazy-loaded below the fold.",
+      "- **Do** route CTAs to role-first sign-up (`/sign-up?role=learner|teacher|parent`) and let the header pill be auth-aware."
     ],
     "donts": [
-      "**Don't** add shadows, gradients, glows, or glass panels anywhere — including on cards and buttons. The sticky header's `backdrop-blur-md` is the single sanctioned exception.",
+      "**Don't** add shadows, gradients, glows, or glass panels anywhere — including on cards and buttons. Two sanctioned exceptions: the sticky header's `backdrop-blur-md`, and `.sci-grid`'s hairline measuring texture (line token, not a color gradient).",
       "**Don't** put Anton on body copy or labels, or Space Mono on sentences (One-Face-Per-Job).",
       "**Don't** dilute mint/violet into translucent washes or use them as body-text colors (Hazard-Tape Rule); keep accents under roughly a tenth of any viewport except the two sanctioned full-bleed bands.",
       "**Don't** invent proof: no fabricated stats, testimonials, logos, pricing, or awards. Platform numbers come from the real `GET /auth/public-stats` endpoint only — `StatsSection` renders a skeleton while loading and an em dash plus `stats_error` on failure (the fabricated fallback numbers were removed; the live badge appears only when counts are actually in). This surface's cleanup is the pattern to repeat.",
-      "**Don't** hardcode copy in components — all visible strings come from `messages/*` under the `landing.` namespace; JSON-Ld/SEO literals are the documented exception.",
+      "**Don't** hardcode copy in components — all visible strings come from `messages/*` under the `landing.` namespace. The only exceptions are JSON-Ld/SEO literals, mono notation that is pure numerals/units/symbols (`09 /`, `F = ma`), and product/technique names (`LangGraph`, `Hybrid RAG`); a status readout or tag containing English words is copy, not notation.",
       "**Don't** reuse dashboard-world faces or token names on this surface (Impact/.verge-display, `v2-*`, `primary`, `border` at white/.24) — they belong to the app shell outside `.mk-surface`."
     ]
   }

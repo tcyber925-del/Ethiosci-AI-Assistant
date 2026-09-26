@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useInView } from '@/hooks/useInView'
 import { Label } from './Reveal'
+import { mintLine } from './mint-line'
 
 /**
  * "01 / Ask EthioSci" — the chat demo. The answer types itself once the panel
@@ -42,14 +43,16 @@ export default function AskDemoSection() {
       <div className="mx-auto grid max-w-[1280px] gap-12 px-5 py-24 md:px-8 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Label>{t('ask_kicker')}</Label>
-          <h2 className="display mt-6 text-[48px] md:text-[72px]">{t('ask_title')}</h2>
+          <h2 className="display mt-6 text-[48px] md:text-[72px]">
+            {t.rich('ask_title', { mint: mintLine })}
+          </h2>
           <p className="mt-6 max-w-sm text-soft">{t('ask_desc')}</p>
         </div>
 
         <div ref={ref} className="rounded-feature border bg-slate p-5 md:p-8 lg:col-span-8">
           <div className="flex items-center justify-between border-b pb-4">
-            <Label>Mode / learn</Label>
-            <p className="label-mono text-mint">RAG / Verified / Curriculum grounded</p>
+            <Label>{t('readout_mode_learn')}</Label>
+            <p className="label-mono text-mint">{t('readout_rag_verified')}</p>
           </div>
 
           <div className="mt-6 flex justify-end">

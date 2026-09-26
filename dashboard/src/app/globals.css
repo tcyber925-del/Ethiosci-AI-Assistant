@@ -328,11 +328,28 @@ html:has(:where(.mk-surface))::-webkit-scrollbar-thumb:hover {
 
   /* Technical mono label — marketing only (dashboard keeps .verge-label). */
   .label-mono {
-    font-family: var(--font-spacemono), var(--font-jbmono), 'Courier New', monospace;
+    font-family: var(--font-spacemono), var(--font-jbmono), var(--font-ethiopic),
+      'Noto Sans Ethiopic', 'Courier New', monospace;
     font-size: 11px;
     line-height: 1.2;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+  }
+
+  /* Amharic compensation (see DESIGN.md → Typography → Amharic): fidel needs
+     more leading than the Latin display, no negative/positive tracking games,
+     and Noto Sans Ethiopic's variable weight instead of Anton's fixed 400. */
+  html[lang='am'] .display {
+    line-height: 1.06;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-synthesis: none;
+  }
+
+  html[lang='am'] .label-mono {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
   }
 
   /* Low-opacity measuring grid behind the hero. */

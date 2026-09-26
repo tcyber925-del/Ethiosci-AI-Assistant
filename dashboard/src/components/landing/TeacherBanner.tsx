@@ -46,7 +46,7 @@ export default function TeacherBanner() {
           type="button"
           onClick={dismiss}
           aria-label={t('banner_dismiss')}
-          className="shrink-0 p-1 text-meta transition-colors hover:text-white"
+          className="relative shrink-0 p-1 text-meta transition-colors before:absolute before:-inset-3 before:content-[''] hover:text-white"
         >
           <X className="h-3.5 w-3.5" aria-hidden />
         </button>
