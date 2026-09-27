@@ -5,7 +5,9 @@ import { useInView } from '@/hooks/useInView'
 import { Label } from './Reveal'
 
 /**
- * "03 / How EthioSci thinks" — the eight-stage pipeline grid. Cells light up
+ * "03 / How EthioSci thinks" — the eight-stage pipeline grid, written for a
+ * general audience: plain-verb stage names and benefit-first descriptions
+ * (copy lives in `messages/*` under `pipe_stage_*`, EN + AM). Cells light up
  * progressively when scrolled into view (the last stage lands on mint); this
  * is a state-driven CSS transition, not an entrance animation, so it stays
  * CSS rather than framer-motion.
@@ -32,10 +34,13 @@ const descKeys = [
   'pipe_stage_8_desc',
 ] as const
 
-/** Product/technique names — proper nouns and notation, deliberately not translated. */
-const tags = ['LangGraph', 'Hybrid RAG', 'Dense + BM25', 'Cross-encoder'] as const
-/** Word-bearing tags — translated copy (DESIGN.md: a word in English is copy, not notation). */
-const wordTagKeys = ['tag_claim_verification', 'tag_curriculum_grounded'] as const
+/** Proof chips a learner, teacher or parent can check — translated copy. */
+const wordTagKeys = [
+  'tag_cited',
+  'tag_curriculum_grounded',
+  'tag_free_learners',
+  'tag_bilingual',
+] as const
 
 export default function PipelineSection() {
   const t = useTranslations('landing')
@@ -86,9 +91,9 @@ export default function PipelineSection() {
         </ol>
 
         <ul className="mt-6 flex flex-wrap gap-2">
-          {[...tags, ...wordTagKeys.map((k) => t(k))].map((tag) => (
-            <li key={tag} className="label-mono rounded-input border px-3 py-2 text-meta">
-              {tag}
+          {wordTagKeys.map((key) => (
+            <li key={key} className="label-mono rounded-input border px-3 py-2 text-meta">
+              {t(key)}
             </li>
           ))}
         </ul>
