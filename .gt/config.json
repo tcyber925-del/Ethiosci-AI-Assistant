@@ -22,6 +22,10 @@
     "memory-timeline": {
       "branch": "feat/memory-timeline-misconceptions",
       "auto_attach": true
+    },
+    "refactor-landing-architecture": {
+      "branch": "refactor-landing-architecture",
+      "auto_attach": true
     }
   }
 }

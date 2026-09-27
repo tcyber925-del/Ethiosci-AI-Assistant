@@ -1,13 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/deepseek-v4-flash-free",
-  "plugin": [
-    ["/home/tcyber/.config/opencode/plugins/goal-plugin.js", { "evaluator": false }]
-  ],
-  "command": {
-    "goal": {
-      "description": "Set a session-scoped goal and auto-continue until complete.",
-      "template": "$ARGUMENTS"
+  "plugins": [
+    {
+      "package": "/home/tcyber/.config/opencode/goal-plugin",
+      "options": { "evaluator": false }
     }
-  }
+  ]
 }
