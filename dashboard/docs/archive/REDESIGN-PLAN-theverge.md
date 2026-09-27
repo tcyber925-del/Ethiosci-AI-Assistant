@@ -1,8 +1,19 @@
 # Dashboard Redesign Plan: Verge-Inspired Editorial System
 
+> **📦 ARCHIVED — status: superseded, partially applied.**
+> Target state never reached: the shipped dashboard is a **light** workspace
+> (`--v2-bg: #FAFAFA`, `--v2-accent: #14B8A6`), not the dark `#131313` canvas below.
+> What actually landed: the Verge palette in `src/styles/design-system.ts` (now **dead** —
+> nothing imports `colors`/`typography`/`spacing`/`shadows`) and three utilities,
+> `.verge-display` / `.verge-label` / `.verge-body` (`src/app/globals.css`).
+>
+> Source design system moved to [`docs/reference/theverge-extraction.md`](../reference/theverge-extraction.md)
+> (non-normative). Normative specs: [`DESIGN.md`](../../DESIGN.md) (marketing) and
+> [`DESIGN-dashboard.md`](../../DESIGN-dashboard.md) (app shell, documents shipped reality).
+
 ## Objective
 
-Redesign the EthioSci dashboard around the visual system in `dashboard/DESIGN-theverge.md`: dark editorial canvas, high-contrast saturated blocks, mono-uppercase metadata, hairline borders, and a StoryStream-style activity rhythm.
+Redesign the EthioSci dashboard around the visual system in `dashboard/docs/reference/theverge-extraction.md` (at the time of writing: `dashboard/DESIGN-theverge.md`): dark editorial canvas, high-contrast saturated blocks, mono-uppercase metadata, hairline borders, and a StoryStream-style activity rhythm.
 
 The redesign should keep the dashboard usable as an education operations product. Use the Verge influence as a system language, not as a literal clone.
 

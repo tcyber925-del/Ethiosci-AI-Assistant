@@ -58,6 +58,7 @@ _Avoid_: Page layout, shell
 
 **Design Tokens**:
 Single source of truth at `src/styles/design-system.ts`. Exports colors, typography, spacing, shadows, radii, and motion values.
+Normative design specs: `DESIGN.md` (marketing surface) and `DESIGN-dashboard.md` (app shell — tokens, contrast, components, known drift). Only `motion`, `radii`, `marketing`, `marketingTypography` are imported anywhere; `colors`/`typography`/`spacing`/`shadows` are dead Verge-era exports.
 _Avoid_: Theme tokens, CSS variables
 
 **StudentDashboard**:

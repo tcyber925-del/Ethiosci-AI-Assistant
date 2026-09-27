@@ -138,6 +138,11 @@ EN/AM LanguageSwitcher, auth-aware "Launch App" pill, multi-column footer) and t
 FAQ `12 /`) inserted between Stream and Closing. The eight shipping rasters in `public/landing/` each carry
 source-repo provenance.
 
+**Scope:** this file is normative for the `(marketing)` route group only. The app shell —
+`(dashboard)` routes and `components/dashboard-v2` — is a light surface with its own
+normative spec: **`DESIGN-dashboard.md`**. Do not carry tokens across the boundary in
+either direction.
+
 **Key Characteristics:**
 - Near-black canvas (`#131313`) with hairline `white/14%` rules as the only dividers
 - Jelly mint (`#3cffd0`) + ultraviolet (`#5200ff`) as hazard-tape accents; saturated color-block tiles, never tint washes

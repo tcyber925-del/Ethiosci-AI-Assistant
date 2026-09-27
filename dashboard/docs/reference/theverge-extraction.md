@@ -1,4 +1,28 @@
-# Design System Inspired by The Verge
+> **⚠️ NON-NORMATIVE REFERENCE — do not build from this file.**
+> This is a mechanical extraction of **theverge.com**'s 2024 redesign, kept only as the
+> "why" behind EthioSci's dark-editorial accent language. It describes a third-party
+> site, not this product.
+>
+> **Normative specs:** [`dashboard/DESIGN.md`](../../DESIGN.md) — marketing surface
+> (`(marketing)` route group) · [`dashboard/DESIGN-dashboard.md`](../../DESIGN-dashboard.md)
+> — app shell (`(dashboard)` routes).
+>
+> **Known contradictions with what ships:**
+> | Topic | This file | Shipped |
+> |---|---|---|
+> | Display face | Manuka ≥60px (proprietary, Klim) | Anton on marketing, Impact (`.verge-display`) on dashboard |
+> | Body / mono | PolySans / PolySans Mono | Space Grotesk / Space Mono (marketing), Inter / JetBrains Mono (dashboard) |
+> | Link hover | `#3860be` deep blue, everywhere | mint on marketing; `--v2-link-hover #0D9488` on dashboard — the link-blue token was deleted as dead |
+> | Focus ring | cyan `#1eaedb` | mint `2px/3px` on marketing; `--v2-focus #0EA5E9` on dashboard |
+> | Error color | ultraviolet `#5200ff` | pink `#ff4fa3` on marketing (violet is 2.5:1 on ink — banned as text); `--v2-error #EF4444` on dashboard |
+> | Light mode | "the dark canvas is the product" | dashboard is light (`--v2-bg #FAFAFA`) |
+> | Breakpoints | 26 tuned breakpoints | Tailwind defaults 640/768/1024/1280 |
+> | Primary button | 24px radius, ring-shadow hover | marketing: 30px, solid white fill hover; No-Shadow Rule |
+>
+> Attribution: describes The Verge (Vox Media) design language; Manuka, PolySans and
+> FK Roman Standard are proprietary typefaces and must not be used.
+
+# Design System Inspired by The Verge (extracted reference)
 
 ## 1. Visual Theme & Atmosphere
 
