@@ -57,8 +57,8 @@ Layout wrapper composing SidebarV2 + ContextHeader + main content canvas. Each v
 _Avoid_: Page layout, shell
 
 **Design Tokens**:
-Single source of truth at `src/styles/design-system.ts`. Exports colors, typography, spacing, shadows, radii, and motion values.
-Normative design specs: `DESIGN.md` (marketing surface) and `DESIGN-dashboard.md` (app shell — tokens, contrast, components, known drift). Only `motion`, `radii`, `marketing`, `marketingTypography` are imported anywhere; `colors`/`typography`/`spacing`/`shadows` are dead Verge-era exports.
+Token module at `src/styles/design-system.ts`. Exports `radii`, `motion`, `marketing`, `marketingTypography` only — the Verge-era `colors`/`typography`/`spacing`/`shadows` block was deleted (its live values were inlined into `marketing`).
+Normative design specs: `DESIGN.md` (marketing surface) and `DESIGN-dashboard.md` (app shell — tokens, contrast, components, known drift). All four are imported somewhere (`motion` → landing Reveal/Hero/QuizDemo, the rest → `tailwind.config.ts`).
 _Avoid_: Theme tokens, CSS variables
 
 **StudentDashboard**:

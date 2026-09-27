@@ -1,86 +1,14 @@
-export const colors = {
-  background: '#131313',
-  surface: '#2d2d2d',
-  textPrimary: '#ffffff',
-  textSecondary: '#949494',
-  border: 'rgba(255,255,255,.24)',
-  borderStrong: '#ffffff',
-  accent: '#3cffd0',
-  accentHover: '#3860be',
-  accentMuted: 'rgba(60, 255, 208, 0.12)',
-  purple: '#5200ff',
-  purpleRule: '#3d00bf',
-  mintBorder: '#309875',
-  focus: '#1eaedb',
-  inverted: '#000000',
-  imageFrame: '#313131',
-  success: '#3cffd0',
-  warning: '#ffcc00',
-  error: '#ff4fa3',
-  neutral: {
-    50: '#ffffff',
-    100: '#e9e9e9',
-    200: '#c2c2c2',
-    300: '#949494',
-    400: '#8c8c8c',
-    500: '#666666',
-    600: '#444444',
-    700: '#313131',
-    800: '#2d2d2d',
-    900: '#131313',
-  },
-} as const;
-
-export const typography = {
-  display: {
-    fontFamily: "Impact, 'Arial Black', 'Helvetica Neue Condensed', Helvetica, sans-serif",
-    fontWeight: 900,
-    lineHeight: 0.95,
-    letterSpacing: '0.8px',
-    textTransform: 'uppercase',
-  },
-  heading: {
-    fontSize: '24px',
-    fontWeight: 700,
-    lineHeight: 1,
-  },
-  subheading: {
-    fontSize: '18px',
-    fontWeight: 600,
-    lineHeight: 1.2,
-    letterSpacing: '1.2px',
-    textTransform: 'uppercase',
-  },
-  body: {
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: 1.5,
-  },
-  caption: {
-    fontFamily: "'JetBrains Mono', 'Space Mono', 'Courier New', monospace",
-    fontSize: '11px',
-    fontWeight: 600,
-    lineHeight: 1.2,
-    letterSpacing: '1.4px',
-    textTransform: 'uppercase',
-  },
-} as const;
-
-export const spacing = {
-  section: '32px',
-  cardPadding: '24px',
-  pagePaddingX: '40px',
-  pagePaddingY: '32px',
-  sidebarExpanded: '256px',
-  sidebarCollapsed: '72px',
-} as const;
-
-export const shadows = {
-  card: 'inset 0 0 0 1px rgba(255,255,255,.24)',
-  elevated: 'inset 0 0 0 1px #3cffd0',
-  sidebar: '1px 0 0 rgba(255,255,255,.24)',
-} as const;
-
+/**
+ * Design tokens for the dashboard shell and the marketing surface.
+ *
+ * Kept deliberately small: `radii`, `motion`, and the marketing pair. The
+ * Verge-dark block (`colors` / `typography` / `spacing` / `shadows` — #131313
+ * canvas, #3cffd0 accent) was deleted: nothing imported it, and advertising it
+ * as the canonical palette contradicted the light shell. The six values
+ * `marketing` still needed were inlined into it below.
+ *
+ * Normative specs: DESIGN.md (marketing), DESIGN-dashboard.md (shell).
+ */
 export const radii = {
   card: '20px',
   feature: '24px',
@@ -110,24 +38,24 @@ export const motion = {
  * Anton display / Space Grotesk body / Space Mono labels.
  *
  * Tailwind (`tailwind.config.ts`) imports this directly — these names are the
- * only color/radius vocabulary allowed in marketing markup. Hex values for
- * `ink`/`slate`/`mint`/`violet`/`meta`/`soft` match the canonical
- * `colors` above; the four accents carry no hex in their source, so they are
- * converted from their origin oklch coordinates.
+ * only color/radius vocabulary allowed in marketing markup. `ink`/`slate`/
+ * `mint`/`violet`/`meta`/`soft` keep the Verge-derived hexes they were lifted
+ * from (the `colors` block that held them is gone); the four accents carry no
+ * hex in their source, so they are converted from their origin oklch coords.
  */
 export const marketing = {
   /** Canvas / near-black page ground. */
-  ink: colors.background,
+  ink: '#131313',
   /** Raised surface: panels, tiles, figcaptions. */
-  slate: colors.surface,
+  slate: '#2d2d2d',
   /** Primary accent: jelly mint. */
-  mint: colors.accent,
+  mint: '#3cffd0',
   /** Secondary accent: ultraviolet. */
-  violet: colors.purple,
+  violet: '#5200ff',
   /** Technical/meta text on ink. */
-  meta: colors.textSecondary,
+  meta: '#949494',
   /** Body text on ink. */
-  soft: colors.neutral[100],
+  soft: '#e9e9e9',
   /** Hairline rules and default border color (white at 14%). */
   line: 'rgba(255,255,255,.14)',
   /** Subject accent — Mathematics tile, highlights. */

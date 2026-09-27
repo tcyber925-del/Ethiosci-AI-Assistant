@@ -108,37 +108,6 @@ html[lang='am'] .text-heading {
   line-height: 1.125rem;
 }
 
-/* --- Utility component classes --- */
-@layer components {
-  .card-default {
-    @apply bg-card rounded-xl border border-border p-5;
-  }
-
-  .card-elevated {
-    @apply bg-card rounded-xl border border-border p-5 shadow-lg shadow-black/5;
-  }
-
-  .card-accent {
-    @apply bg-card rounded-xl border border-border border-t-2 border-t-v2-accent p-5;
-  }
-
-  .badge-green {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-v2-accent-muted text-v2-accent;
-  }
-
-  .badge-yellow {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-v2-warning/10 text-v2-warning;
-  }
-
-  .badge-red {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-v2-error/10 text-v2-error;
-  }
-
-  .badge-muted {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-v2-border/50 text-v2-text-secondary;
-  }
-}
-
 /* --- Cell micro-animation for sidebar --- */
 @keyframes cell-membrane {
   0% { transform: rotate(0deg); }
@@ -148,11 +117,6 @@ html[lang='am'] .text-heading {
 @keyframes cell-nucleus {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.08); opacity: 1; }
-}
-
-@keyframes cell-organelle {
-  0% { transform: rotate(0deg) translateX(10px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
 }
 
 .cell-membrane {
@@ -167,8 +131,7 @@ html[lang='am'] .text-heading {
 
 @media (prefers-reduced-motion: reduce) {
   .cell-membrane,
-  .cell-nucleus,
-  .cell-organelle {
+  .cell-nucleus {
     animation: none;
   }
 }
@@ -190,17 +153,6 @@ html[lang='am'] .text-heading {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--v2-text-secondary);
-}
-
-/* --- Recharts tooltip --- */
-.recharts-default-tooltip {
-  background: var(--v2-surface) !important;
-  border-color: var(--v2-border) !important;
-  color: var(--v2-text-primary) !important;
-}
-
-.recharts-tooltip-label {
-  color: var(--v2-text-secondary) !important;
 }
 
 /* --- Markdown content --- */
@@ -277,9 +229,6 @@ html[lang='am'] .text-heading {
     font-weight: 600;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-  }
-  .verge-body {
-    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   }
 }
 
@@ -387,16 +336,6 @@ html:has(:where(.mk-surface))::-webkit-scrollbar-thumb:hover {
   }
 }
 
-@keyframes pulse-node {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 @keyframes spin-slow {
   to {
     transform: rotate(360deg);
@@ -412,10 +351,6 @@ html:has(:where(.mk-surface))::-webkit-scrollbar-thumb:hover {
 .anim-draw {
   stroke-dasharray: 400;
   animation: draw 1.4s ease-out both;
-}
-
-.anim-pulse {
-  animation: pulse-node 3s ease-in-out infinite;
 }
 
 .anim-spin {
@@ -435,7 +370,6 @@ html:has(:where(.mk-surface))::-webkit-scrollbar-thumb:hover {
   }
 
   .anim-draw,
-  .anim-pulse,
   .anim-spin,
   .caret::after {
     animation: none !important;

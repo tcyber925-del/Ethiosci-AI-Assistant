@@ -101,7 +101,7 @@ Authority order, highest first:
 | 2 | `tailwind.config.ts` | Maps `--v2-*` (via `color-mix` for alpha) into `v2-*` utilities; also exposes the legacy names below |
 | 3 | `src/styles/design-system.ts` → `motion` | Live; shared with marketing (180ms / 800ms reveal pair) |
 | 4 | `src/styles/design-system.ts` → `radii`, `marketing`, `marketingTypography` | Live, **marketing-owned** — available as utilities but not this surface's vocabulary |
-| 5 | `src/styles/design-system.ts` → `colors`, `typography`, `spacing`, `shadows` | **DEAD CODE.** Nothing imports them. They hold the Verge-dark palette (`#131313`, `#3cffd0`, `#3860be`) and contradict the live light tokens. Never read them as this surface's spec. |
+| 5 | `src/styles/design-system.ts` → `colors`, `typography`, `spacing`, `shadows` | ✅ **DELETED** — they held the Verge-dark palette (`#131313`, `#3cffd0`, `#3860be`), contradicting the live light tokens. The six values `marketing` derived from `colors` were inlined into it, so the file now exports only `radii`, `motion`, `marketing`, `marketingTypography` — all four imported somewhere. |
 
 Two color vocabularies coexist in markup today and both are "valid":
 
@@ -361,9 +361,11 @@ prefer them over new arbitrary values when you need 20 or 24.
 - Disabled: `disabled:opacity-50`.
 
 ### Status & misc
-- **`badge-green` / `badge-yellow` / `badge-red` / `badge-muted`** and
-  **`card-default` / `card-elevated` / `card-accent`** are declared in `globals.css` but
-  **referenced nowhere** — components hand-roll the equivalent markup. See Known Drift §5.
+- **No card/badge primitives.** The Verge-era `card-default`/`card-elevated`/
+  `card-accent` and `badge-green`/`badge-yellow`/`badge-red`/`badge-muted` classes were
+  **deleted** — referenced nowhere, with components hand-rolling the equivalent markup
+  (`bg-*-10 text-*` chips, `rounded-[20px] border` cards). `hover:bg-card-hover` is
+  unrelated: that is a live Tailwind *color* in `tailwind.config.ts`. See Known Drift §5.
 - **Modals:** `bg-card border border-border rounded-xl shadow-xl` (legacy vocabulary).
 - **Scrollbars:** 8px, `--v2-border` thumb; Recharts tooltips inherit `--v2-surface`.
 - **`.prose`** (markdown output) inherits `--v2-*`; links `--v2-accent` + underline.
@@ -466,10 +468,15 @@ and are kept for the record; the rest are open, each with a proposed fix.
    `var(--font-ethiopic), 'Noto Sans Ethiopic'` before the generic — `.verge-display`
    and `.verge-label`, the latter being the higher-traffic risk since every
    `MetricStrip`/`InsightCard` label is translated.
-5. **Dead component classes.** `card-default`, `card-elevated`, `card-accent`,
-   `badge-green/yellow/red/muted`, `.verge-body` are declared in `globals.css` and
-   referenced nowhere — `card-elevated` also encodes a `shadow-lg` this spec otherwise
-   bans. *Fix:* delete, or adopt them as the one true card/badge primitive.
+5. ✅ **FIXED — dead component classes.** The audit found 12 rules in `globals.css`
+   with zero code references (verified project-wide, excluding this document):
+   `card-default`, `card-elevated` (`shadow-lg`, which this spec otherwise bans),
+   `card-accent`, `badge-green`/`yellow`/`red`/`muted`, `.verge-body`, plus
+   `anim-pulse` (and its orphaned `@keyframes pulse-node`), `@keyframes cell-organelle`
+   + `.cell-organelle`, and `.recharts-default-tooltip` / `.recharts-tooltip-label`.
+   All deleted; the `cell-membrane`/`cell-nucleus` reduced-motion guard is untouched,
+   and `.badge-*` had already been tree-shaken out of the shipped CSS — they never
+   reached a browser. —1.6 KB.
 6. **Radius duplication.** `rounded-[16px]` and `rounded-2xl` are both 16px;
    `rounded-[20px]`/`rounded-[24px]` literals coexist with `rounded-card`/`rounded-feature`
    (identical values). *Fix:* use the named scale.
@@ -493,9 +500,13 @@ and are kept for the record; the rest are open, each with a proposed fix.
    5.02 / 4.83:1 on surface), all also clearing the 3:1 non-text floor for the `/10`
    tints, borders, icons and chart fills. No call site changed; no solid status fill
    carries light text (all 51 fills are `/10` tints), so nothing else had to move.
-10. **Dead Verge token block.** `design-system.ts` `colors`/`typography`/`spacing`/
-    `shadows` still advertise `#131313` / `#3cffd0` / `#3860be` as "the" tokens.
-    *Fix:* delete the four dead exports (nothing imports them).
+10. ✅ **FIXED — dead Verge token block.** `typography`, `spacing` and `shadows` were
+    imported nowhere and are gone. `colors` needed one correction to the original claim:
+    it *was* still consumed — internally, by `marketing` (`ink: colors.background` …) —
+    so rather than break that, its six values were inlined into `marketing` and all four
+    exports deleted. `design-system.ts` now exports only `radii`, `motion`, `marketing`,
+    `marketingTypography`, each imported by `tailwind.config.ts` or the landing
+    components. —1.3 KB.
 11. **No `lang="am"` type overrides on shell classes.** `.verge-display` (+0.8px) and
     `.verge-label` (1.4px, 11px) keep their Latin tracking and size under Amharic, while
     marketing ships `html[lang='am']` compensation for `.display`/`.label-mono`.
