@@ -276,7 +276,7 @@ export default function AssessmentStudioPage() {
               <button
                 type="submit"
                 disabled={generating || !topic.trim()}
-                className="mt-2 h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-bold hover:bg-white disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
+                className="mt-2 h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-bold hover:bg-white disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
               >
                 {generating ? (
                   <>

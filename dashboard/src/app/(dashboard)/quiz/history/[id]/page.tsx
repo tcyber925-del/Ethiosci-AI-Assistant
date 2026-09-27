@@ -147,7 +147,7 @@ export default function QuizAttemptDetailPage() {
       </div>
 
       <div className="flex gap-3 justify-center">
-        <Link href="/quiz/take" className="px-6 py-3 bg-v2-accent text-v2-inverted rounded-lg text-sm font-medium">
+        <Link href="/quiz/take" className="px-6 py-3 bg-v2-accent text-v2-text-primary rounded-lg text-sm font-medium">
           {t('take_another')}
         </Link>
         <Link href="/quiz/history" className="px-6 py-3 border border-v2-border rounded-lg text-sm text-v2-text-muted">

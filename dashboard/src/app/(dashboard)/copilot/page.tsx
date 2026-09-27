@@ -148,7 +148,7 @@ export default function CopilotPage() {
               <div key={i} className={`flex gap-2.5 ${isUser ? 'flex-row-reverse' : ''}`}>
                 <div
                   className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                    isUser ? 'bg-v2-accent text-v2-inverted' : 'bg-v2-accent-muted text-v2-accent'
+                    isUser ? 'bg-v2-accent text-v2-text-primary' : 'bg-v2-accent-muted text-v2-accent'
                   }`}
                 >
                   {isUser ? <UserIcon className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
@@ -156,7 +156,7 @@ export default function CopilotPage() {
                 <div
                   className={`rounded-2xl px-4 py-2.5 text-sm whitespace-pre-wrap max-w-[85%] ${
                     isUser
-                      ? 'bg-v2-accent text-v2-inverted'
+                      ? 'bg-v2-accent text-v2-text-primary'
                       : 'bg-v2-bg border border-v2-border text-v2-text-primary'
                   }`}
                 >
@@ -205,7 +205,7 @@ export default function CopilotPage() {
             <button
               type="submit"
               disabled={busy || !input.trim()}
-              className="inline-flex items-center justify-center gap-1.5 px-4 h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-semibold hover:bg-white transition-colors disabled:opacity-50"
+              className="inline-flex items-center justify-center gap-1.5 px-4 h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-semibold hover:bg-white transition-colors disabled:opacity-50"
             >
               <Send className="w-4 h-4" />
             </button>

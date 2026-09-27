@@ -226,7 +226,7 @@ export function SidebarV2() {
         <button
           onClick={() => setSearchOpen(true)}
           aria-label={ts('open_search_aria')}
-          className="relative mx-3 mt-4 flex h-10 items-center gap-3 rounded-[20px] border border-v2-border bg-v2-surface px-3 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-text-primary focus-visible:verge-focus"
+          className="relative mx-3 mt-4 flex h-10 items-center gap-3 rounded-[20px] border border-v2-border bg-v2-surface px-3 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
         >
           <Search className="h-4 w-4 shrink-0" />
           <AnimatePresence mode="wait">
@@ -269,9 +269,9 @@ export function SidebarV2() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`relative flex h-11 items-center gap-3 rounded-[20px] border px-3 text-sm transition-colors duration-150 focus-visible:verge-focus ${
+                      className={`relative flex h-11 items-center gap-3 rounded-[20px] border px-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus ${
                         active
-                          ? 'border-v2-accent bg-v2-accent text-v2-inverted'
+                          ? 'border-v2-accent bg-v2-accent text-v2-text-primary'
                           : 'border-v2-border bg-v2-bg text-v2-text-secondary hover:border-v2-accent hover:text-v2-link-hover'
                       }`}
                       title={collapsed ? t(item.labelKey) : undefined}
@@ -325,7 +325,7 @@ export function SidebarV2() {
           <button
             onClick={handleLogout}
             aria-label={ts('sign_out')}
-            className="flex w-full items-center gap-3 rounded-[20px] border border-transparent px-3 py-2 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-error hover:text-v2-error focus-visible:verge-focus"
+            className="flex w-full items-center gap-3 rounded-[20px] border border-transparent px-3 py-2 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-error hover:text-v2-error focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
           >
             <LogOut className="h-4 w-4 shrink-0" />
             <AnimatePresence mode="wait">
@@ -346,7 +346,7 @@ export function SidebarV2() {
 
         <button
           onClick={() => setCollapsed(prev => !prev)}
-          className="absolute -right-3 top-24 flex h-6 w-6 items-center justify-center rounded-full border border-v2-border bg-v2-bg text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-accent focus-visible:verge-focus"
+          className="absolute -right-3 top-24 flex h-6 w-6 items-center justify-center rounded-full border border-v2-border bg-v2-bg text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
           aria-label={collapsed ? ts('expand_aria') : ts('collapse_aria')}
         >
           <ChevronLeft
@@ -401,7 +401,7 @@ export function SidebarV2() {
                           key={item.href}
                           href={item.href}
                           onClick={() => { setSearchOpen(false); setSearchQuery('') }}
-                          className="flex h-10 items-center gap-3 rounded-[20px] border border-transparent px-3 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-link-hover focus-visible:verge-focus"
+                          className="flex h-10 items-center gap-3 rounded-[20px] border border-transparent px-3 text-sm text-v2-text-secondary transition-colors duration-150 hover:border-v2-accent hover:text-v2-link-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
                         >
                           <Icon className="h-4 w-4 shrink-0" />
                           <span className="verge-label">{t(item.labelKey)}</span>

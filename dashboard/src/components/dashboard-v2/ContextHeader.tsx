@@ -21,7 +21,7 @@ export function ContextHeader({ items }: ContextHeaderProps) {
           {item.href ? (
             <Link
               href={item.href}
-              className="truncate transition-colors duration-150 hover:text-v2-link-hover focus-visible:verge-focus"
+              className="truncate transition-colors duration-150 hover:text-v2-link-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
             >
               {item.label}
             </Link>

@@ -196,7 +196,7 @@ function AccountForm() {
           type="button"
           onClick={handleResume}
           disabled={loading !== null}
-          className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
+          className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-v2-text-primary transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
         >
           {loading === 'resume' ? tLogin('please_wait') : t('continue')}
         </button>
@@ -269,7 +269,7 @@ function AccountForm() {
             <button
               type="submit"
               disabled={loading !== null || !isLoaded}
-              className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
+              className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-v2-text-primary transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
             >
               {loading === 'email' ? tLogin('please_wait') : tLogin('create_and_sign_in')}
             </button>

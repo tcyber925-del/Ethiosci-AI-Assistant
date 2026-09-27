@@ -148,7 +148,7 @@ export default function StudentAssignmentDetailPage() {
             </div>
             {success && <p className="text-xs text-v2-success flex items-center gap-1"><CheckCircle className="w-3 h-3" /> {t('submitted_success')}</p>}
             <button type="submit" disabled={submitting || success || !content.trim()}
-              className="h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-bold hover:bg-white disabled:opacity-50 transition-all flex items-center justify-center gap-2">
+              className="h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-bold hover:bg-white disabled:opacity-50 transition-all flex items-center justify-center gap-2">
               {submitting ? <><Loader className="w-4 h-4 animate-spin" /> {t('submitting')}</> : <><Upload className="w-4 h-4" /> {t('submit_action')} <ArrowRight className="w-4 h-4" /></>}
             </button>
           </form>

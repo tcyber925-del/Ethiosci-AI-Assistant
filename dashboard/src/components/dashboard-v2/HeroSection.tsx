@@ -38,9 +38,9 @@ export function HeroSection({ title, subtitle, action, secondary }: HeroSectionP
         {action && (
           <Link
             href={action.href}
-            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-[24px] bg-v2-accent px-6 text-sm font-bold text-v2-inverted transition-colors duration-150 hover:bg-white hover:text-v2-inverted focus-visible:verge-focus"
+            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-[24px] bg-v2-accent px-6 text-sm font-bold text-v2-text-primary transition-colors duration-150 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus"
           >
-            <span className="verge-label text-v2-inverted">{action.label}</span>
+            <span className="verge-label">{action.label}</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
         )}

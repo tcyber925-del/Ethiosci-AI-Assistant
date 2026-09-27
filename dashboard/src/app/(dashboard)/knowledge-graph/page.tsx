@@ -331,7 +331,7 @@ export default function KnowledgeGraphPage() {
                 <button
                   type="submit"
                   disabled={submitting || !newPrereqTopicId}
-                  className="h-10 rounded-xl bg-v2-accent text-v2-inverted text-xs font-bold hover:bg-white disabled:opacity-50 transition-colors flex items-center justify-center gap-1.5"
+                  className="h-10 rounded-xl bg-v2-accent text-v2-text-primary text-xs font-bold hover:bg-white disabled:opacity-50 transition-colors flex items-center justify-center gap-1.5"
                 >
                   {submitting ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Plus className="w-3.5 h-3.5" />}
                   {t('establish')}

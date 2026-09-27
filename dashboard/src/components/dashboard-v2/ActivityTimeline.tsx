@@ -18,7 +18,7 @@ const TIMELINE_ICONS: Record<string, { icon: React.ElementType; accent: string; 
   xp: { icon: Zap, accent: 'text-v2-warning', tile: 'border-v2-warning/70 bg-v2-bg' },
   quiz: { icon: FileCheck, accent: 'text-v2-accent', tile: 'border-v2-accent/70 bg-v2-surface' },
   tutor: { icon: MessageSquare, accent: 'text-v2-purple', tile: 'border-v2-purple/70 bg-v2-surface' },
-  achievement: { icon: Medal, accent: 'text-v2-inverted', tile: 'border-v2-accent bg-v2-accent text-v2-inverted' },
+  achievement: { icon: Medal, accent: 'text-v2-text-primary', tile: 'border-v2-accent bg-v2-accent text-v2-text-primary' },
 }
 
 const DEFAULT_ICON = { icon: AlertTriangle, accent: 'text-v2-text-secondary', tile: 'border-v2-border bg-v2-surface' }
@@ -78,12 +78,12 @@ export function ActivityTimeline({ items }: ActivityTimelineProps) {
                 </div>
                 <div className={`rounded-[20px] border p-4 transition-colors duration-150 hover:text-v2-link-hover ${cfg.tile}`}>
                   <div className="flex items-start gap-3">
-                    <div className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${isAccentTile ? 'border-v2-inverted/30' : 'border-v2-border'} ${cfg.accent}`}>
+                    <div className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${isAccentTile ? 'border-v2-text-primary/30' : 'border-v2-border'} ${cfg.accent}`}>
                       <Icon className="h-4 w-4" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className={`verge-label mb-1 ${isAccentTile ? 'text-v2-inverted/70' : 'text-v2-text-secondary'}`}>{TYPE_LABEL_KEYS[item.type] ? t(TYPE_LABEL_KEYS[item.type]) : item.type}</p>
-                      <p className={`text-sm leading-relaxed ${isAccentTile ? 'text-v2-inverted' : 'text-v2-text-primary'}`}>{item.description}</p>
+                      <p className={`verge-label mb-1 ${isAccentTile ? 'text-v2-text-primary/75' : 'text-v2-text-secondary'}`}>{TYPE_LABEL_KEYS[item.type] ? t(TYPE_LABEL_KEYS[item.type]) : item.type}</p>
+                      <p className={`text-sm leading-relaxed ${isAccentTile ? 'text-v2-text-primary' : 'text-v2-text-primary'}`}>{item.description}</p>
                     </div>
                   </div>
                 </div>

@@ -114,7 +114,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
             </select>
             <button
               onClick={() => router.push('/classroom')}
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-v2-accent text-v2-inverted text-xs font-semibold hover:bg-white transition-colors"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-v2-accent text-v2-text-primary text-xs font-semibold hover:bg-white transition-colors"
             >
               <Plus className="w-4 h-4" /> {t('seed_create')}
             </button>

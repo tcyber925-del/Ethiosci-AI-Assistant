@@ -87,7 +87,7 @@ export default function GradeSubmissionPage() {
               className="bg-v2-bg border border-v2-border text-v2-text-primary text-sm rounded-xl px-4 py-3 outline-none focus:border-v2-accent resize-none" />
           </div>
           <button type="submit" disabled={submitting || success}
-            className="h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-bold hover:bg-white disabled:opacity-50 transition-all">
+            className="h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-bold hover:bg-white disabled:opacity-50 transition-all">
             {submitting ? t('saving') : t('submit_grade')}
           </button>
         </form>

@@ -75,7 +75,7 @@ export function TTSPlayButton({ text, language = 'am' }: TTSPlayButtonProps) {
         title={tc('play_audio')}
         className={`p-2 rounded-lg transition-colors shrink-0 ${
           playing
-            ? 'bg-v2-accent text-v2-inverted'
+            ? 'bg-v2-accent text-v2-text-primary'
             : 'bg-v2-accent/10 text-v2-accent hover:bg-v2-accent/20'
         }`}
       >

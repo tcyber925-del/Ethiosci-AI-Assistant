@@ -178,7 +178,7 @@ export default function QuizTakeListPage() {
           <button
             onClick={generateQuiz}
             disabled={generating || !genTopic.trim()}
-            className="w-full px-4 py-3 bg-v2-accent text-v2-inverted rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-opacity"
+            className="w-full px-4 py-3 bg-v2-accent text-v2-text-primary rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-opacity"
           >
             {generating ? (
               <><Loader2 className="w-4 h-4 animate-spin" /> {t('generating')}</>

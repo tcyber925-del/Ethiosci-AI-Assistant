@@ -187,7 +187,7 @@ export default function KnowledgeDetailPage() {
             </button>
             <button
               onClick={handleDownload}
-              className="inline-flex items-center gap-1.5 px-4 h-10 rounded-xl bg-v2-accent text-v2-inverted text-sm font-semibold hover:bg-white transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 h-10 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-semibold hover:bg-white transition-colors"
             >
               <Download className="w-4 h-4" /> {t('download_action')}
             </button>

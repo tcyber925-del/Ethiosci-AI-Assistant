@@ -79,7 +79,7 @@ export default function QuizHistoryPage() {
         <div className="text-center py-16">
           <Award className="w-12 h-12 text-v2-text-muted/20 mx-auto mb-3" />
           <p className="text-v2-text-muted">{t('no_attempts')}</p>
-          <Link href="/quiz/take" className="inline-block mt-4 px-4 py-2 bg-v2-accent text-v2-inverted rounded-lg text-sm">
+          <Link href="/quiz/take" className="inline-block mt-4 px-4 py-2 bg-v2-accent text-v2-text-primary rounded-lg text-sm">
             {t('take_first_quiz')}
           </Link>
         </div>

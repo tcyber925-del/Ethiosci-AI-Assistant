@@ -235,7 +235,7 @@ export default function AskPage() {
             <button
               onClick={() => setMode('graph')}
               className={`px-3 py-2 text-xs font-medium transition-colors ${
-                mode === 'graph' ? 'bg-v2-accent text-v2-inverted' : 'bg-v2-bg text-v2-text-muted hover:text-v2-text-primary'
+                mode === 'graph' ? 'bg-v2-accent text-v2-text-primary' : 'bg-v2-bg text-v2-text-muted hover:text-v2-text-primary'
               }`}
             >
               {ta('graph_mode')}
@@ -243,7 +243,7 @@ export default function AskPage() {
             <button
               onClick={() => setMode('chat')}
               className={`px-3 py-2 text-xs font-medium transition-colors ${
-                mode === 'chat' ? 'bg-v2-accent text-v2-inverted' : 'bg-v2-bg text-v2-text-muted hover:text-v2-text-primary'
+                mode === 'chat' ? 'bg-v2-accent text-v2-text-primary' : 'bg-v2-bg text-v2-text-muted hover:text-v2-text-primary'
               }`}
             >
               {ta('chat_mode')}
@@ -258,7 +258,7 @@ export default function AskPage() {
           </Link>
           <button
             onClick={handleNewChat}
-            className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-v2-accent text-v2-inverted rounded-lg hover:opacity-90 transition-opacity"
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-v2-accent text-v2-text-primary rounded-lg hover:opacity-90 transition-opacity"
           >
             <Plus className="w-3.5 h-3.5" />
             {ta('new_chat')}
@@ -351,7 +351,7 @@ export default function AskPage() {
             data-ask-button
             onClick={askQuestion}
             disabled={loading || !question.trim() || turn.state !== 'idle'}
-            className="px-6 py-3 bg-v2-accent text-v2-inverted rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 transition-opacity"
+            className="px-6 py-3 bg-v2-accent text-v2-text-primary rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 transition-opacity"
           >
             {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> {ta('thinking')}...</> : <><Send className="w-4 h-4" /> {ta('ask_button')}</>}
           </button>

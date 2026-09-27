@@ -11,14 +11,26 @@
   --v2-accent: #14B8A6;
   --v2-accent-hover: #0D9488;
   --v2-accent-muted: rgba(20, 184, 166, 0.1);
-  --v2-success: #22C55E;
-  --v2-warning: #F59E0B;
-  --v2-error: #EF4444;
+  /* Status colors darkened for TEXT contrast (57 text-* uses: trend labels, chips,
+     inline status). The previous vivid shades failed 4.5:1 on --v2-bg as badly as
+     2.18 / 2.06 / 3.61:1. The new shades pass as text (4.81 / 4.81 / 4.63:1 on
+     #FAFAFA; 5.02 / 5.02 / 4.83:1 on surface) and remain well past the 3:1
+     non-text floor for the /10 tints, borders and icons. See DESIGN-dashboard.md
+     → Known Drift §9. */
+  --v2-success: #15803D; /* was #22C55E (green-700) */
+  --v2-warning: #B45309; /* was #F59E0B (amber-700) */
+  --v2-error: #DC2626;   /* was #EF4444 (red-600) */
   --v2-purple: #7C3AED;
   --v2-purple-rule: #6D28D9;
+  /* DEPRECATED — accent fills now take ink (--v2-text-primary, 7.17:1) instead of
+     white (2.49:1); nothing references this token. Keep only until any dynamic
+     `text-v2-inverted` class appears; see DESIGN-dashboard.md → Known Drift §8. */
   --v2-inverted: #FFFFFF;
   --v2-link-hover: #0D9488;
-  --v2-focus: #0EA5E9;
+  /* Focus ring: sky-600 not sky-500 — #0EA5E9 measured 2.66:1 on --v2-bg,
+     below the WCAG 1.4.11 3:1 floor for focus indicators. #0284C7 = 3.92:1
+     on #FAFAFA, 4.10:1 on #FFFFFF. See DESIGN-dashboard.md → Known Drift. */
+  --v2-focus: #0284C7;
   --v2-border-strong: #94A3B8;
   --v2-mint-border: #14B8A6;
   --v2-image-frame: #E2E8F0;
@@ -250,13 +262,17 @@ html[lang='am'] .text-heading {
 
 @layer utilities {
   .verge-display {
-    font-family: Impact, 'Arial Black', 'Helvetica Neue Condensed', Helvetica, sans-serif;
+    /* Ethiopic entry required: Impact/Arial Black/Helvetica carry no fidel —
+       Amharic `v2.*` page titles render here. Same rule as DESIGN.md's stacks. */
+    font-family: Impact, 'Arial Black', 'Helvetica Neue Condensed', Helvetica,
+      var(--font-ethiopic), 'Noto Sans Ethiopic', sans-serif;
     font-weight: 900;
     letter-spacing: 0.8px;
     text-transform: uppercase;
   }
   .verge-label {
-    font-family: var(--font-jbmono), 'Space Mono', 'Courier New', monospace;
+    font-family: var(--font-jbmono), 'Space Mono', var(--font-ethiopic),
+      'Noto Sans Ethiopic', 'Courier New', monospace;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.4px;

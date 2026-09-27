@@ -203,7 +203,7 @@ export default function QuizTakePage() {
         <div className="flex gap-3 justify-center">
           <Link
             href="/ask"
-            className="px-6 py-3 bg-v2-accent text-v2-inverted rounded-lg text-sm font-medium"
+            className="px-6 py-3 bg-v2-accent text-v2-text-primary rounded-lg text-sm font-medium"
           >
             {t('continue_learning')}
           </Link>
@@ -326,7 +326,7 @@ export default function QuizTakePage() {
           <button
             onClick={submitQuiz}
             disabled={!allAnswered || submitting}
-            className="flex items-center gap-2 px-6 py-2 bg-v2-accent text-v2-inverted rounded-lg text-sm font-medium disabled:opacity-50"
+            className="flex items-center gap-2 px-6 py-2 bg-v2-accent text-v2-text-primary rounded-lg text-sm font-medium disabled:opacity-50"
           >
             {submitting ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('submitting')}</> : t('submit')}
           </button>

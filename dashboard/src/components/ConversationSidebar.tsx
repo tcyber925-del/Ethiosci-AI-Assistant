@@ -43,7 +43,7 @@ export function ConversationSidebar({
             <button
               onClick={onNewChat}
               disabled={loading}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium bg-v2-accent text-v2-inverted rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium bg-v2-accent text-v2-text-primary rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               <Plus className="w-3.5 h-3.5" />
               {ta('new_chat')}

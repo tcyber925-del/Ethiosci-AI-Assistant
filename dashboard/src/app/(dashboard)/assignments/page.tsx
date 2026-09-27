@@ -75,7 +75,7 @@ export default function AssignmentsPage() {
           </div>
           <Link
             href="/assignments/new"
-            className="inline-flex items-center gap-1.5 px-4 h-10 rounded-xl bg-v2-accent text-v2-inverted text-sm font-semibold hover:bg-white transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 h-10 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-semibold hover:bg-white transition-colors"
           >
             <Plus className="w-4 h-4" /> {t('new_assignment')}
           </Link>

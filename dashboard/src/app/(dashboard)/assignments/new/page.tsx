@@ -129,7 +129,7 @@ export default function NewAssignmentPage() {
           </div>
 
           <button type="submit" disabled={submitting || success || !title.trim()}
-            className="w-full h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-bold hover:bg-white transition-all flex items-center justify-center gap-2 disabled:opacity-50">
+            className="w-full h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-bold hover:bg-white transition-all flex items-center justify-center gap-2 disabled:opacity-50">
             {submitting ? t('creating') : <>{t('create_submit')} <ArrowRight className="w-4 h-4" /></>}
           </button>
         </form>

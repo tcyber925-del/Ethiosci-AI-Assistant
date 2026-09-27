@@ -106,7 +106,7 @@ export default function VerifyPage() {
       <button
         type="submit"
         disabled={loading || code.length !== 6}
-        className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
+        className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-v2-text-primary transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
       >
         {loading ? tLogin('please_wait') : tLogin('verify_button')}
       </button>

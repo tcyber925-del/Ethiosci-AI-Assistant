@@ -25,11 +25,11 @@ export function MetricStrip({ metrics }: MetricStripProps) {
           <div
             key={i}
             className={`min-h-28 px-6 py-5 ${
-              m.accent ? 'bg-v2-accent text-v2-inverted' : i % 2 === 0 ? 'bg-v2-surface' : 'bg-v2-bg'
+              m.accent ? 'bg-v2-accent text-v2-text-primary' : i % 2 === 0 ? 'bg-v2-surface' : 'bg-v2-bg'
             }`}
           >
-            <p className={`verge-label ${m.accent ? 'text-v2-inverted/75' : 'text-v2-text-secondary'}`}>{m.label}</p>
-            <p className={`mt-3 text-3xl font-black leading-none ${m.accent ? 'text-v2-inverted' : 'text-v2-text-primary'}`}>
+            <p className={`verge-label ${m.accent ? 'text-v2-text-primary/75' : 'text-v2-text-secondary'}`}>{m.label}</p>
+            <p className="mt-3 text-3xl font-black leading-none text-v2-text-primary">
               {m.value}
             </p>
           </div>

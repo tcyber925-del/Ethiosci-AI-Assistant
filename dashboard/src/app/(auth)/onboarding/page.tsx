@@ -105,7 +105,7 @@ export default function OnboardingPage() {
         type="button"
         onClick={handleSubmit}
         disabled={loading || (isStudent && !grade)}
-        className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
+        className="w-full rounded-lg bg-v2-accent px-4 py-2.5 text-sm font-medium text-v2-text-primary transition-colors hover:bg-v2-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-v2-focus disabled:opacity-50"
       >
         {loading ? t('saving') : t('finish')}
       </button>

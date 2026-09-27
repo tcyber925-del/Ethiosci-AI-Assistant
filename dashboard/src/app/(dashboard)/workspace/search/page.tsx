@@ -75,7 +75,7 @@ export default function SearchGatewayPage() {
           <button
             type="submit"
             disabled={searching || !query.trim()}
-            className="px-5 h-12 rounded-xl bg-v2-accent text-v2-inverted text-sm font-bold hover:bg-white disabled:opacity-50 transition-colors shrink-0 flex items-center gap-1.5"
+            className="px-5 h-12 rounded-xl bg-v2-accent text-v2-text-primary text-sm font-bold hover:bg-white disabled:opacity-50 transition-colors shrink-0 flex items-center gap-1.5"
           >
             {searching ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />} {tc('search')}
           </button>
