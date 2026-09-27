@@ -411,11 +411,16 @@ There are no text inputs on this surface. Two controls stand in:
   from `design-system.ts` are the only color/radius vocabulary allowed in marketing markup; there is no
   link-blue token — mint is the link/hover accent).
 - **Do** ship bilingual parity: every `landing.*` key exists in both `messages/en.json` and `messages/am.json`
-  (185 keys each, strict parity), and EN/AM ship together in the same change. Mono notation made of numerals,
-  units, symbols, and fixed codes (`09 /`, `EN + AM`, `→`, `F = ma`) — plus product/technique names
-  (`LangGraph`, `Hybrid RAG`, `Dense + BM25`, `Cross-encoder`) — stays literal in both locales; word-bearing
-  readouts and tags (`RAG / active`, `● Status / online`, `Mode / learn`, `RAG / Verified / Curriculum
-  grounded`, `Claim verification`) come from `landing.*` keys so Amharic ships them too.
+  (187 keys each, strict parity), and EN/AM ship together in the same change. Mono notation made of numerals,
+  units, symbols, and fixed codes (`09 /`, `EN + AM`, `→`, `F = ma`) stays literal in both locales; every
+  word-bearing readout and tag (`RAG / active`, `● Status / online`, `Mode / learn`, `RAG / Verified /
+  Curriculum grounded`, `Cited: grade, unit, page`) comes from a `landing.*` key so Amharic ships it too.
+- **Do** write section copy for a general audience: plain verbs and reader benefit, no pipeline or
+  orchestration jargon in headings, stage names, descriptions, or chips. The pipeline section is the
+  reference — stage names are everyday verbs (`Ask · Understand · Find · Match · Explain · Check · Teach ·
+  Practice`) and its chips are proof a learner, teacher or parent can check (`Cited: grade, unit, page`,
+  `Curriculum grounded`, `Free for learners`, `Amharic + English`). The in-panel technical readouts
+  (`RAG / active`) are the one documented place technique vocabulary surfaces.
 - **Do** honor the floor of the accessibility brief: 44px minimum targets, mint focus-visible outline,
   `prefers-reduced-motion` (CSS `anim-*` disabled; framer reveals follow `reducedMotion="user"`), semantic
   heading order, and Ethiopic fallback in every font stack.
@@ -436,8 +441,7 @@ There are no text inputs on this surface. Two controls stand in:
   an em dash plus `stats_error` on failure (the fabricated fallback numbers were removed; the live badge
   appears only when counts are actually in). This surface's cleanup is the pattern to repeat.
 - **Don't** hardcode copy in components — all visible strings come from `messages/*` under the `landing.`
-  namespace. The only exceptions are JSON-Ld/SEO literals, mono notation that is pure numerals/units/symbols
-  (`09 /`, `F = ma`), and product/technique names (`LangGraph`, `Hybrid RAG`); a status readout or tag
-  containing English words is copy, not notation.
+  namespace. The only exceptions are JSON-Ld/SEO literals and mono notation that is pure numerals/units/
+  symbols (`09 /`, `F = ma`); a readout or tag containing English words is copy, not notation.
 - **Don't** reuse dashboard-world faces or token names on this surface (Impact/.verge-display, `v2-*`,
   `primary`, `border` at white/.24) — they belong to the app shell outside `.mk-surface`.
